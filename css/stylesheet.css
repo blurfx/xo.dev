@@ -1,6 +1,11 @@
 /* DevBird and Riven */
 body {
+	background:url('../img/logo.png');
 	font-family: "Helvetica Neue", Helvetica, "Segoe UI", "Malgun Gothic", "NanumGothic";
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
 }
 
 header {
