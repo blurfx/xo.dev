@@ -22,19 +22,14 @@
 		<section>
 			<h2>major works</h2>
 			
-			<ul>
+			<ul id="list">
 			
 				<li>
 				My Public Repos on <a href="https://github.com/DevBird/">GitHub</a>
-					<ul>
-						<li><a href="https://github.com/DevBird/LoL-Chat-for-Windows">LoL Chat for Windows</a></li>
-						<li><a href="https://github.com/DevBird/devbird.github.com">DevBird.GitHub.com</a></li>
-						<li><a href="https://github.com/DevBird/Change-WebBrowser-UserAgent-Example">Changing WebBrowser User-Agent Exmaple</a></li>
-						<li><a href="https://github.com/DevBird/TrayBin">TrayBin</a></li>
-						<li><a href="https://github.com/DevBird/Spryt-Core">Spryt Core</a>
-						<li><a href="https://github.com/DevBird/QuickSnap">QuickSnap</a></li>
-						<li><a href="https://github.com/DevBird/Google-TTS-Example">Google TTS Example</a></li>
+					<ul id="list-inner">
+						
 					</ul>
+					<span id="loading"><br /><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading...</strong></span>
 				<br>
 				</li>
 				<li><a href="http://devbird.tistory.com/1128">4Chal</a> - League of Legends User Status Tracker</li>
@@ -53,5 +48,25 @@
 			</ul>
 		</section>
 		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript"> 
+                var username = 'DevBird';
+                $('#list-inner').fadeOut(0);
+ 
+                $.getJSON('https://api.github.com/users/' + username + '/repos', function(data){  
+ 				//$('#list-inner').empty();
+				
+				//$('<li></li>').html('My Public Repos on <a href="https://github.com/' + username + '">GitHub</a>').prependTo('#list');
+				
+	                        $.each(data, function(i, item) {                  
+                                
+                                $('<li></li>').html('<a href ="' + item.html_url + '">' + item.name.replace(/-/g,' ') + '</a>').appendTo('#list-inner'); 
+ 
+                 });  
+					$('#loading').fadeOut(500);				 
+					$('#list-inner').fadeIn(700);
+                }); 
+                       
+	</script> 
 	</body>
 </html>
