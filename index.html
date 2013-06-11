@@ -50,27 +50,35 @@
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript"> 
+			var username = 'DevBird';
+		
 			var ver = getInternetExplorerVersion();
 			if (ver < 9 && ver != -1)
+			{
+				//$('#list-inner').hide();
 				alert('Why no IE 9+ or Chrome?!');
-
-            var username = 'DevBird';
-            $('#list-inner').hide();
+				$('#loading').remove();
+				$('<p></p>').html('Click <a href="https://github.com/' + username + '">Here</a> to View my GitHub Profile</br>and don`t forgot upgrade your IE!').appendTo('#list-inner');
+			}
+			else
+			{
+				
+				$('#list-inner').hide();
  
-            $.getJSON('https://api.github.com/users/' + username + '/repos', function(data){  
+				$.getJSON('https://api.github.com/users/' + username + '/repos', function(data){  
  			
 				
-			//$('<li></li>').html('My Public Repos on <a href="https://github.com/' + username + '">GitHub</a>').prependTo('#list');
+				//$('<li></li>').html('My Public Repos on <a href="https://github.com/' + username + '">GitHub</a>').prependTo('#list');
 				
-				$.each(data, function(i, item)
-				{                  
-					$('<li></li>').html('<a href ="' + item.html_url + '">' + item.name.replace(/-/g,' ') + '</a>').appendTo('#list-inner'); 
-				});  
+					$.each(data, function(i, item)
+					{                  
+						$('<li></li>').html('<a href ="' + item.html_url + '">' + item.name.replace(/-/g,' ') + '</a>').appendTo('#list-inner'); 
+					});  
 			
-				$('#loading').fadeOut(500);				 
-				$('#list-inner').fadeIn(700);
-            }); 
-            
+					$('#loading').fadeOut(500, function() { $(this).remove(); });				 
+					$('#list-inner').fadeIn(700);
+				}); 
+            }
 			function getInternetExplorerVersion()
 			{
 				var rv = -1;
