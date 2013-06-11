@@ -10,7 +10,7 @@
 		<header>
 			<h1>DevBird</h1>
 		</header>
-		<section>
+		<section id="introSection">
 			<h2>self intro</h2>
 			<ul>
 				<li>Name : Chang-Hui Lee</li>
@@ -19,7 +19,7 @@
 				<li>Interested in : Web, Mobile App Development and WPF</li>
 			</ul>
 		</section>
-		<section>
+		<section id="worksSection">
 			<h2>major works</h2>
 			
 			<ul id="list">
@@ -38,7 +38,7 @@
 				<li>Korean Translator of <a href="https://translate.twitter.com">Twitter</a></li>
 			</ul>
 		</section>
-		<section>
+		<section id="contactSection">
 			<h2>contact</h2>
 			<ul>
 				<li>Blog : <a href="http://devbird.tistory.com">DevBird`s Factory</a></li>
@@ -62,9 +62,11 @@
 			}
 			else
 			{
+				$('#introSection').hide();
+				//$('#list-inner').hide();
+				$('#worksSection').hide();
+				$('#contactSection').hide();
 				
-				$('#list-inner').hide();
- 
 				$.getJSON('https://api.github.com/users/' + username + '/repos', function(data){  
  			
 				
@@ -76,7 +78,11 @@
 					});  
 			
 					$('#loading').fadeOut(500, function() { $(this).remove(); });				 
-					$('#list-inner').fadeIn(700);
+					$('#introSection').fadeIn(1000);
+					$('#list-inner').fadeIn(500);
+					$('#worksSection').fadeIn(2000);
+					$('#contactSection').fadeIn(3000);
+					
 				}); 
             }
 			function getInternetExplorerVersion()
