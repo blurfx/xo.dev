@@ -12,7 +12,6 @@ body {
 
 header {
 	text-shadow: 5px 5px 10px gray;
-	text-shadow: 0px 0px 3px skyblue;
 }
 
 a {
@@ -23,16 +22,11 @@ a {
 
 
 a:hover {
-<<<<<<< HEAD
 	color: red;
 	text-shadow:none;
 	text-shadow: 1px 1px 1px magenta;
-=======
-	color: cyan;
-	text-shadow:none;
-	text-shadow: 1px 1px 1px blue;
->>>>>>> b4d3fbedcc1c180bbbebac686ee8cf3503d67266
 }
+
 ul
 {
 	margin : 0;
