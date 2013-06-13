@@ -23,9 +23,15 @@ a {
 
 
 a:hover {
+<<<<<<< HEAD
 	color: red;
 	text-shadow:none;
 	text-shadow: 1px 1px 1px magenta;
+=======
+	color: cyan;
+	text-shadow:none;
+	text-shadow: 1px 1px 1px blue;
+>>>>>>> b4d3fbedcc1c180bbbebac686ee8cf3503d67266
 }
 ul
 {
