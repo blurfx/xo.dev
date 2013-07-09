@@ -16,7 +16,7 @@ header {
 
 a {
 	color: transparent;
-	text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+	text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
 	text-decoration: none;
 }
 
