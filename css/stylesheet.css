@@ -18,9 +18,7 @@ a {
 	color: transparent;
 	text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
 	text-decoration: none;
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#FF000,direction=4);
-
-
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#FF0000,direction=4);
 }
 
 
