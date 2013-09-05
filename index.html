@@ -14,7 +14,7 @@
 			<h2>self intro</h2>
 			<ul>
 				<li>Name : Chang-Hui Lee</li>
-				<li>Age : 19</li>
+				<li>Age : 18</li>
 				<li>Country : South Korea</li>
 				<li>Interested in : Web, Mobile App Development and WPF</li>
 			</ul>
@@ -53,10 +53,10 @@
 			var username = 'DevBird';
 		
 			var ver = getInternetExplorerVersion();
-			if (ver < 9 && ver != -1)
+			if (ver < 10 && ver != -1)
 			{
 				//$('#list-inner').hide();
-				alert('Why no IE 9+ or Chrome?!');
+				alert('Don`t use IE. it sux.');
 				$('#loading').remove();
 				$('<p></p>').html('Click <a href="https://github.com/' + username + '">Here</a> to View my GitHub Profile</br>and don`t forgot upgrade your IE!').appendTo('#list-inner');
 			}
