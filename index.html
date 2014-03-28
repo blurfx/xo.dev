@@ -3,96 +3,83 @@
 	<head>
 		<meta charset="utf-8">
 		<link href="css/stylesheet.css" rel="stylesheet">
-		<title>DevBird.Info()</title>
-
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<title>0000FF</title>
 	</head>
+
 	<body>
-		<header>
-			<h1>DevBird</h1>
-		</header>
-		<section id="introSection">
-			<h2>self intro</h2>
-			<ul>
-				<li>Name : DevBird. aka FireLily</li>
-				<li>Age : 19</li>
-				<li>Country : South Korea</li>
-				<li>Interested in : Web, Mobile App Development and WPF</li>
-			</ul>
-		</section>
-		<section id="worksSection">
-			<h2>major works</h2>
-			
-			<ul id="list">
-			
-				<li>
-				My Public Repos on <a href="https://github.com/DevBird/">GitHub</a>
-					<ul id="list-inner">
-						
-					</ul>
-					<span id="loading"><br /><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading...</strong></span>
-				</li>
-				<li><a href="http://devbird.tistory.com/1128">4Chal</a></li>
-				<li><a href="#">MμTT</a></li>
-				<li>Korean Translator of <a href="https://translate.twitter.com">Twitter</a></li>
-			</ul>
-		</section>
-		<section id="contactSection">
-			<h2>contact</h2>
-			<ul>
-				<li>Blog : <a href="http://devbird.me">DevBird`s Factory</a></li>
-				<li>E-Mail(and Google Talk) : <img src="img/email_dark.png" alt="E-Mail"/></li>
-			</ul>
-		</section>
-		
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript"> 
-			var username = 'DevBird';
-		
-			var ver = getInternetExplorerVersion();
-			if (ver < 10 && ver != -1)
-			{
-				//$('#list-inner').hide();
-				alert('Don`t use IE. it sux.');
-				$('#loading').remove();
-				$('<p></p>').html('Click <a href="https://github.com/' + username + '">Here</a> to View my GitHub Profile</br>and don`t forgot upgrade your IE!').appendTo('#list-inner');
-			}
-			else
-			{
-				$('#introSection').hide();
-				//$('#list-inner').hide();
-				$('#worksSection').hide();
-				$('#contactSection').hide();
-				
-				$.getJSON('https://api.github.com/users/' + username + '/repos', function(data){  
- 			
-				
-				//$('<li></li>').html('My Public Repos on <a href="https://github.com/' + username + '">GitHub</a>').prependTo('#list');
-				
-					$.each(data, function(i, item)
-					{                  
-						$('<li></li>').html('<a href ="' + item.html_url + '">' + item.name.replace(/-/g,' ') + '</a>').appendTo('#list-inner'); 
-					});  
-			
-					$('#loading').fadeOut(500, function() { $(this).remove(); });				 
-					$('#introSection').fadeIn(1000);
-					//$('#list-inner').fadeIn(500);
-					$('#worksSection').fadeIn(2000);
-					$('#contactSection').fadeIn(3500);
+		<div class="bg">
+			<div class="bg-normal"></div>
+			<div class="bg-blur"></div>
+		</div>
+
+		<div class="wrapper">
+			<header>
+				<div class="line-holder"></div>
+				<div class="profile-wrapper"></div>
+				<div class="profile-holder"></div>
+				<div class="hidden-xs">
+					<ul class="nav">
+						<li><a href="#me">Me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+					<ul>
+				</div>
 					
-				}); 
-            }
-			function getInternetExplorerVersion()
-			{
-				var rv = -1;
-				if (navigator.appName == 'Microsoft Internet Explorer')
-					{
-						var ua = navigator.userAgent;
-						var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-						if (re.exec(ua) != null)
-							rv = parseFloat( RegExp.$1 );
-					}
-				return rv;
-			}
-		</script> 
+			</header>
+			<div class="content">
+
+				<div class="me">
+					<a id="me"></a>
+					<span class="title">About Me</span>
+					<p class="text-center">Description <about class="m"></about></p>
+
+				</div>
+
+				<div class="projects">
+					<a id="projects"></a>
+					<span class="title">Projects</span>
+					<ul class="project-list">	
+						<li>
+							<div class="project-holder">
+								<div class="project-img"></div>
+								<span class="project-title">Project 1</span>
+								<div class="project-desc">s<a href="#">ghada</a>sdasdsadassadsadhaskudhuiasdhasuidhuaisdhuaisdhaisudguasidguyasdg</div>
+							</div>
+						</li>
+						<li>
+							<div class="project-holder">
+								<div class="project-img"></div>
+								<span class="project-title">Project 2</span>
+								<div class="project-desc">sadasdasdsadassadsadhaskudhuiasdhasuidhuaisdhuaisdhaisudguasidguyasdg</div>
+							</div>
+						</li>
+						<li>
+							<div class="project-holder">
+								<div class="project-img"></div>
+								<span class="project-title">Project 3</span>
+								<div class="project-desc">sadasdasdsadassadsadhaskudhuiasdhasuidhuaisdhuaisdhaisudguasidguyasdg</div>
+						</div>
+						</li>
+						<li>
+							<div class="project-holder">
+								<div class="project-img"></div>
+								<span class="project-title">Project 4</span>
+								<div class="project-desc">sadasdasdsadassadsadhaskudhuiasdhasuidhuaisdhuaisdhaisudguasidguyasdg</div>
+						</div>
+						</li>
+					</ul>	
+				</div>
+
+				<div class="contact">
+					<a id="contact"></a>
+					<span class="title">Contact</span>
+				</div>
+
+			</div>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="js/blur.js" type="text/javascript"></script>
 	</body>
 </html>
