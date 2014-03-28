@@ -171,6 +171,8 @@ span.project-title
 	margin-right: 40px;
 }
 
+.mailto-fa { font-size: 165px;}
+
 a.black-fa:hover
 {
 	color: #6B6B6B;
@@ -179,7 +181,7 @@ a.black-fa:hover
 .bq-subtext
 {
 	padding-left: 30px;
-	padding-bottom: 10px;
+	
 }
 
 footer
@@ -187,8 +189,20 @@ footer
 	background-color: #E0E0E0;
 }
 
-blockquote.bq-title
+blockquote.bq-who
 {
 	border-left: 5px solid #EC8BFF;
+	margin: 0 0 10px;
+}
+
+blockquote.bq-inter
+{
+	border-left: 5px solid #8B8BFF;
+	margin: 0 0 10px;
+}
+
+blockquote.bq-story
+{
+	border-left: 5px solid #8BDFFF;
 	margin: 0 0 10px;
 }
