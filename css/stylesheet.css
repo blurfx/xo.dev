@@ -196,8 +196,13 @@ a.black-fa:hover
 
 footer
 {
-	background-color: #E0E0E0;
+	background-color: #616161;
+	text-align: center;
+	font-size: small;
+	color: #FFFFFF;
 }
+
+footer a { color:#00FFAA; }
 
 blockquote.bq-who
 {
