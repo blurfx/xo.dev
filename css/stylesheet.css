@@ -203,7 +203,7 @@ footer
 }
 
 footer a { color:#00FFAA; }
-
+footer a:hover { color:#CCFF00; }
 blockquote.bq-who
 {
 	border-left: 5px solid #EC8BFF;
