@@ -1,5 +1,4 @@
-body
-{
+body{
 	background:	-webkit-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* Chrome 10+, Saf5.1+ */
 	background:    -moz-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* FF3.6+ */
 	background:		-ms-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* IE10 */
@@ -10,13 +9,32 @@ body
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.title
-{
+.title, .content{
 	background-color: rgba(255,255,255,0.4);
-	margin: 30px auto;
 	width: 700px;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 	text-align: center;
 	font-size: 25px;
+}
+
+.content{
+	text-align: initial;
+ 	padding-top: 30px;
+ 	font-size: 15px !important;
+}
+
+.content-wrapper{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.radius-top{
+	margin: 30px auto 0 auto;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.radius-bottom{
+	margin: 0 auto 30px auto;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
