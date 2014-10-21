@@ -1,11 +1,11 @@
 body{
-	background:	-webkit-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* Chrome 10+, Saf5.1+ */
-	background:    -moz-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* FF3.6+ */
-	background:		-ms-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* IE10 */
-	background:		  o-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* Opera 11.10+ */
-	background: 		linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* W3C */
-	width: 100%;
-	color: #666;
+
+	background: -webkit-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* Chrome 10+, Saf5.1+ */
+	background:    -moz-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* FF3.6+ */
+	background:     -ms-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* IE10 */
+	background:      -o-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* Opera 11.10+ */
+	background:         linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* W3C */    
+	color: #444;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
