@@ -1,16 +1,10 @@
 body{
-
-	background: -webkit-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* Chrome 10+, Saf5.1+ */
-	background:    -moz-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* FF3.6+ */
-	background:     -ms-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* IE10 */
-	background:      -o-linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* Opera 11.10+ */
-	background:         linear-gradient(90deg, #B993D6 10%, #8CA6DB 90%); /* W3C */    
 	color: #444;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.title, .content{
-	background-color: rgba(255,255,255,0.4);
+header, .content, footer{
+	background-color: rgba(168,168,168,0.4);
 	width: 700px;
 	text-align: center;
 	font-size: 25px;
