@@ -1,10 +1,16 @@
 body{
-	color: #444;
+	color: #000;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+a{
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid black;
+	padding-bottom: 1px;
+}
+
 header, .content, footer{
-	background-color: rgba(168,168,168,0.4);
 	width: 700px;
 	text-align: center;
 	font-size: 25px;
