@@ -19,13 +19,17 @@ ul {
 	list-style-type: none;	
 }
 
-header, .content, footer{
+header, article, footer{
 	padding-left: 20px;
 	font-size: 25px;
 }
 
-.content{
+article{
 	text-align: initial;
- 	padding-top: 30px;
- 	font-size: 16px !important;
+	padding-top: 30px;
+	font-size: 16px !important;
+}
+
+footer {
+	margin-top: 30px;
 }
