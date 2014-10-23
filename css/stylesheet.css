@@ -1,6 +1,6 @@
 body{
 	color: #000;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Source Sans Pro", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 a{
@@ -8,6 +8,10 @@ a{
 	text-decoration: none;
 	border-bottom: 1px solid black;
 	padding-bottom: 1px;
+}
+
+a:active{
+	padding-bottom: 0px;
 }
 
 header, .content, footer{
