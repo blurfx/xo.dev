@@ -16,7 +16,7 @@ a:active{
 }
 
 ul {
-	list-style-type: none;
+	list-style-type: none;	
 }
 
 header, .content, footer{
@@ -28,17 +28,4 @@ header, .content, footer{
 	text-align: initial;
  	padding-top: 30px;
  	font-size: 16px !important;
-}
-
-
-.radius-top{
-	margin: 30px auto 0 auto;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-
-.radius-bottom{
-	margin: 0 auto 30px auto;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
 }
