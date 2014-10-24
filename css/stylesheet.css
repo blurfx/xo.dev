@@ -1,7 +1,8 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body{
 	padding: 5% 10% 10%;
 	color: #000;
-	font-family: "Source Sans Pro", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Source Sans Pro","Helvetica Neue", "Nanum Gothic", Helvetica,Arial,sans-serif;
 }
 
 a{
