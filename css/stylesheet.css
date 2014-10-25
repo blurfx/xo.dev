@@ -17,6 +17,10 @@ a{
 	font-weight: normal;
 }
 
+a:hover {
+	color: #aaa;
+}
+
 a:active{
 	padding-bottom: 0px;
 }
@@ -32,11 +36,18 @@ header, article, footer{
 
 
 article{
+	width: 550px;
 	text-align: initial;
 	padding-top: 30px;
-	font-size: 16px !important;
+	margin-left: 10px;
+	font-size: 20px !important;
 }
 
 footer {
 	margin-top: 30px;
+}
+
+.mailto {
+	font-style: italic;
+	border: none;
 }
