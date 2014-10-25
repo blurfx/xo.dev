@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body{
+	font-weight: 300;
 	padding: 5% 10% 10%;
 	color: #000;
 	font-family: "Source Sans Pro","Helvetica Neue", "Nanum Gothic", Helvetica,Arial,sans-serif;
@@ -10,6 +11,10 @@ a{
 	text-decoration: none;
 	border-bottom: 1px solid black;
 	padding-bottom: 1px;
+}
+
+.fw400 {
+	font-weight: normal;
 }
 
 a:active{
@@ -24,6 +29,7 @@ header, article, footer{
 	padding-left: 20px;
 	font-size: 25px;
 }
+
 
 article{
 	text-align: initial;
