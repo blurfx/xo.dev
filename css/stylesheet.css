@@ -42,7 +42,8 @@ article{
 	text-align: initial;
 	padding-top: 30px;
 	margin-left: 10px;
-	font-size: 20px !important;
+	font-size: 18px !important;
+	line-height: 1.5;
 }
 
 footer {
