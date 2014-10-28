@@ -28,21 +28,27 @@ a:active{
 }
 
 ul {
+	margin-top: 2em;
 	list-style-type: none;	
 }
 
-header, article, footer{
+li strong {
+	margin-right: 25px;
+}
+
+header, article, footer, section.works{
 	padding-left: 20px;
+}
+
+header, footer {
 	font-size: 25px;
 }
 
-
-article{
+article, section.works{
 	width: 550px;
-	text-align: initial;
 	padding-top: 30px;
 	margin-left: 10px;
-	font-size: 18px !important;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
