@@ -1,6 +1,4 @@
-html,body {
-	height: 100%;
-}
+html,body {	height: 100%; }
 
 body{
 	width: 100%;
@@ -52,14 +50,8 @@ a{
 	padding-bottom: 1px;
 	font-weight: 400;
 }
-
-a:hover {
-	color: #aaa;
-}
-
-a:active{
-	padding-bottom: 0px;
-}
+a:hover { color: #aaa; }
+a:active{ padding-bottom: 0px; }
 
 span { vertical-align: middle;}
 p { margin-left: 20px; }
@@ -73,43 +65,3 @@ li a {
 }
 li:before{ content: '- '; }
 .nohref{ border:none; }
-/*
-
-
-.wrapper {
-	padding: 5% 10% 10%;
-}
-.fw400 {
-	font-weight: normal;
-}
-
-
-
-
-
-header, article, footer, section.works{
-	padding-left: 20px;
-}
-
-header, footer {
-	font-size: 25px;
-}
-
-article, section.works{
-	width: 600px;
-	padding-top: 30px;
-	margin-left: 10px;
-	font-size: 18px;
-	line-height: 1.5;
-}
-
-footer {
-	margin-top: 30px;
-}
-
-.mailto {
-	font-style: italic;
-	border: none;
-}
-
-*/
