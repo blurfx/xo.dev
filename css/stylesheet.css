@@ -1,22 +1,56 @@
+html,body {
+	height: 100%;
+}
+
 body{
 	width: 100%;
 	font-weight: 300;
+	font-family: "NanumBarunRoboto","Helvetica Neue", "Apple SD 산돌고딕 Neo", Helvetica,sans-serif;
+    font-size: 20px;
 	color: #000;
-	font-family: "Source Sans Pro","Helvetica Neue", "Nanum Gothic", Helvetica,Arial,sans-serif;
+	-webkit-animation-fill-mode: both;
+	-webkit-font-smoothing: antialiased;
+    -webkit-animation: fadein 0.6s;
+       -moz-animation: fadein 0.6s;
+        -ms-animation: fadein 0.6s;
+         -o-animation: fadein 0.6s;
+            animation: fadein 0.6s;
+
+
 }
 
+@keyframes fadein {from { opacity: 0; } to { opacity: 1; } }
+@-moz-keyframes fadein { from { opacity: 0; } to { opacity: 1; }}
+@-webkit-keyframes fadein { from { opacity: 0; } to { opacity: 1; }}
+@-ms-keyframes fadein { from { opacity: 0; } to { opacity: 1; }}	
+@-o-keyframes fadein { from { opacity: 0; } to { opacity: 1; }}
+
+.wrapper {
+	width: 1000px;
+	margin: 40px auto;
+	/*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);*/
+}
+
+.block { margin-bottom: 50px; }
+
+.me {
+	background-image: url(../i/me.jpg);
+	background-size: cover;
+	height: 80px;
+	width: 80px;
+	border-radius: 42px;
+	border: 2px solid #8c8c8c;
+	display: block;
+	margin: 0 auto;
+}
+.title { font-size: 1.6em; display: block; }
+
 a{
-	color: #000;
+	color: #373737;
 	text-decoration: none;
 	border-bottom: 1px solid black;
 	padding-bottom: 1px;
-}
-
-.wrapper {
-	padding: 5% 10% 10%;
-}
-.fw400 {
-	font-weight: normal;
+	font-weight: 400;
 }
 
 a:hover {
@@ -27,14 +61,31 @@ a:active{
 	padding-bottom: 0px;
 }
 
+span { vertical-align: middle;}
+p { margin-left: 20px; }
 ul {
 	margin-top: 1em;
 	list-style-type: none;	
 }
-
 li a {
 	margin-right: 25px;
+	font-size: 18px;
 }
+li:before{ content: '- '; }
+.nohref{ border:none; }
+/*
+
+
+.wrapper {
+	padding: 5% 10% 10%;
+}
+.fw400 {
+	font-weight: normal;
+}
+
+
+
+
 
 header, article, footer, section.works{
 	padding-left: 20px;
@@ -61,11 +112,4 @@ footer {
 	border: none;
 }
 
-.workdesc{
-	font-size: 16px;
-	display: none;
-}
-
-li strong:hover + .workdesc{
-	display: inline;
-}
+*/
