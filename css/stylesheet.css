@@ -21,13 +21,12 @@ body{
 
 .wrapper {
 	position: relative;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	    -ms-transform: translateY(-50%) translateX(-50%);
 	   		transform: translateY(-50%) translateX(-50%);
 	text-align: center;
-	padding-right: 102px;
 }
 
 .square {
@@ -37,16 +36,16 @@ body{
 	line-height: 140px;
 	opacity: 0.6;
 	border: 2px solid #78A9A6;
-	-webkit-transform:  rotate(45deg) translateY(-50%);
-		-ms-transform: rotate(45deg) translateY(-50%);
-		transform: rotate(45deg) translateY(-50%);
+	-webkit-transform:  rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
 	margin: 27px;
 	display: inline-block;
 	transition: all .5s;
 }
 
-.square.bottom {
-	margin-top: -100%;
+.bottom {
+	margin-top: -4.5%;
 }
 .square:hover {
 	opacity: 1;
@@ -89,7 +88,7 @@ p.header { font-size: 1.2em; }
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 	background-color: rgba(0,0,0,0.7);
 	width: 800px;
-
+	text-align: center;
 }
 
 .show {
