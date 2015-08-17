@@ -1,5 +1,9 @@
-html,body {	height: 100%; }
+html,body,.bg {
+  margin: 0;
+  padding: 0;
+}
 
+html,body {	height: 100%; }
 
 @keyframes hue {
   from {
