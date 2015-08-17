@@ -5,13 +5,13 @@
 
 html,body {
 	min-height: 100%;
-	background: #282830;
-  color: #ffffff;
+	background: #ffffff;
+  color: #333333;
 }
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #555555;
 }
 
 pre {
@@ -39,7 +39,7 @@ code {
 }
 
 .blog-header nav {
-  
+
 }
 
 
