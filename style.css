@@ -67,11 +67,9 @@ code {
 .posts a{
   display: block;
   padding: 10px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
-.cate-Life a:hover{
+.cate-Life a:hover, a:hover .category{
   background: #e74c3c;
   color: #ffffff;
 }
@@ -122,6 +120,13 @@ code {
 
 .cate-Life .category, .post-info .cate-Life{
   color:#e74c3c;
+}
+
+/* transition */
+
+.posts a, .posts .category {
+  -webkit-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 
 .svg-icon.dribbble {
