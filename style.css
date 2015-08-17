@@ -123,24 +123,24 @@ code {
   margin-top: 40px;
 }
 
-.cate-Life a:hover{
+.cate-life a:hover{
   background: #e74c3c;
 }
-.cate-Life .category, .post-info .cate-Life{
+.cate-life .category, .post-info .cate-life{
   color:#e74c3c;
 }
 
-.cate-Dev a:hover{
+.cate-dev a:hover{
   background: #9b59b6;
 }
-.cate-Dev .category, .post-info .cate-Dev{
+.cate-dev .category, .post-info .cate-dev{
   color:#9b59b6;
 }
 
-.cate-Travel a:hover{
+.cate-travel a:hover{
   background: #3498db;
 }
-.cate-Travel .category, .post-info .cate-Travel{
+.cate-travel .category, .post-info .cate-travel{
   color:#3498db;
 }
 
