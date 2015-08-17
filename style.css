@@ -69,8 +69,11 @@ code {
   padding: 10px;
 }
 
-.cate-Life a:hover, a:hover .category{
+.cate-Life a:hover{
   background: #e74c3c;
+}
+
+.posts a:hover, a:hover .category{
   color: #ffffff;
 }
 
@@ -116,6 +119,10 @@ code {
   text-align: center;
   font-weight: 700;
   color: #7f8c8d;
+}
+
+.post-content {
+  margin-top: 40px;
 }
 
 .cate-Life .category, .post-info .cate-Life{
