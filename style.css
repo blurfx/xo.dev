@@ -129,6 +129,10 @@ code {
   text-align: center;
 }
 
+.paging .disabled {
+  color: #aaaaaa;
+}
+
 .paging .prev {
   float: left;
   font-size: 1.4em;
@@ -137,6 +141,11 @@ code {
 .paging .next {
   float: right;
   font-size: 1.4em;
+}
+
+.paging .page-count {
+  font-weight: 700;
+  color: #7f8c8d;
 }
 
 .cate-life a:hover{
