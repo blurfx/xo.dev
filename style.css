@@ -82,9 +82,20 @@ code {
   margin: 0 auto;
 }
 
+.post-header {
+  width: 850px;
+  margin: 20px auto;
+}
+
+.post-header .home {
+  font-weight: 1.5em;
+}
+
 .post-title {
+  display: block;
   text-align: center;
   font-size: 2em;
+  font-weight: 700;
 }
 
 .post-date {
