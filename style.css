@@ -58,12 +58,22 @@ code {
 
 .posts li {
   border-top: 1px solid #ddd;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .posts li:last-child {
   border-bottom: 1px solid #ddd;
+}
+
+.posts a{
+  display: block;
+  padding: 10px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cate-Life a:hover{
+  background: #e74c3c;
+  color: #ffffff;
 }
 
 .posts .category{
@@ -88,7 +98,11 @@ code {
 }
 
 .post-header .home {
-  font-weight: 1.5em;
+  font-size: 1.5em;
+}
+
+.post-header span {
+  font-weight: 700;
 }
 
 .post-title {
