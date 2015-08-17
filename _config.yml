@@ -14,7 +14,9 @@ google_analytics:
 url: http://mystika.me
 
 baseurl: ""
+permalink: none
 
 markdown: kramdown
+
 kramdown:
     input: GFM
