@@ -17,33 +17,25 @@
   <body>
     <header class="post-header">
       <div class="post-info">
-        <h2 class="blog-name"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2> :: <span>{{ page.category }}</span>
+        <a href="{{ site.baseurl }}/" class="home">{{ site.title }}</a>:<span>{{ page.category }}</span>
       </div>
-
-      <nav>
-        <a href="{{ site.baseurl }}/about">About</a>
-      </nav>
     </header>
 
     <article class="post">
-      <h1>{{ page.title }}</h1>
+      <span class="post-title">{{ page.title }}</span>
       
-      <div class="date">
+      <div class="post-date">
         {{ page.date | date_to_string }}
       </div>
 
-      <div class="entry">
+      <div class="post-content">
         {{ content }}
       </div>
     </article>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+    <footer class="footer">
+      {% include svg-icons.html %}
+    </footer>
 
     {% include analytics.html %}
   </body>

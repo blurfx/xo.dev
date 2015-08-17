@@ -34,7 +34,7 @@ code {
 
 .blog-header {
   text-align: center;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .blog-description {
@@ -46,9 +46,14 @@ code {
   margin-top: 10px;
 }
 
+.post-header {
+
+}
+
 .posts {
   max-width: 600px;
   margin: 0 auto;
+  list-style: none;
 }
 
 .posts li {
@@ -70,6 +75,23 @@ code {
 
 .posts .time {
   float: right;
+}
+
+.post {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.post-title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.post-date {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #7f8c8d;
 }
 
 .svg-icon.dribbble {
