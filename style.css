@@ -69,9 +69,7 @@ code {
   padding: 10px;
 }
 
-.cate-Life a:hover{
-  background: #e74c3c;
-}
+
 
 .posts a:hover, a:hover .category{
   color: #ffffff;
@@ -125,8 +123,25 @@ code {
   margin-top: 40px;
 }
 
+.cate-Life a:hover{
+  background: #e74c3c;
+}
 .cate-Life .category, .post-info .cate-Life{
   color:#e74c3c;
+}
+
+.cate-Dev a:hover{
+  background: #9b59b6;
+}
+.cate-Dev .category, .post-info .cate-Dev{
+  color:#9b59b6;
+}
+
+.cate-Travel a:hover{
+  background: #3498db;
+}
+.cate-Travel .category, .post-info .cate-Travel{
+  color:#3498db;
 }
 
 /* transition */
