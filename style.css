@@ -123,6 +123,22 @@ code {
   margin-top: 40px;
 }
 
+.paging {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.paging .prev {
+  float: left;
+  font-size: 1.4em;
+}
+
+.paging .next {
+  float: right;
+  font-size: 1.4em;
+}
+
 .cate-life a:hover{
   background: #e74c3c;
 }

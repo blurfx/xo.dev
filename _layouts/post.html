@@ -33,22 +33,6 @@
       </div>
     </article>
 
-    <div class="paging">
-      {% if paginator.previous_page %}
-        <span class="prev"><a href="{{ paginator.previous_page_path }}">›</a></span>
-      {% else %}
-          <span class="prev disabled">‹</span>
-      {% endif %}
-
-      {% if paginator.next_page %}
-        <span class="next"><a href="{{ paginator.next_page_path }}">›</a></span>
-      {% else %}
-        <span class="next disabled">›</span>
-      {% endif %}
-      
-      <span class="page-count">page {{ paginator.page }} / {{ paginator.total_pages }}</span>
-    </div>
-
     {% include analytics.html %}
   </body>
 </html>
