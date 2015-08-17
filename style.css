@@ -11,6 +11,7 @@ html,body {
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 pre {
@@ -25,6 +26,20 @@ pre {
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+}
+
+.blog-header {
+  text-align: center;
+  margin: 10px auto 50px;
+}
+
+.blog-description {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.blog-header nav {
+  
 }
 
 
