@@ -1,17 +1,21 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,body {
-	min-height: 100%;
-	background: #ffffff;
+  min-height: 100%;
+  background: #ffffff;
   color: #333333;
 }
 
 a {
   text-decoration: none;
   color: #555555;
+}
+
+a:hover {
+  color: #e74c3c;
 }
 
 pre {
