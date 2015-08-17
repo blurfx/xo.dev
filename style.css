@@ -34,7 +34,7 @@ code {
 
 .blog-header {
   text-align: center;
-  margin: 10px auto 50px;
+  margin: 50px auto;
 }
 
 .blog-description {
@@ -43,13 +43,33 @@ code {
 }
 
 .blog-header nav {
-
+  margin-top: 10px;
 }
 
 .posts {
-  max-width: 850px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.posts li {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.posts li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.posts .category{
+  width: 40px;
+  display: inline-block;
   text-align: center;
-  margin: 0 auto
+  font-weight: 700;
+}
+
+.posts .time {
+  float: right;
 }
 
 .svg-icon.dribbble {

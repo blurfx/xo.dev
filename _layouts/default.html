@@ -25,7 +25,7 @@
       </nav>
     </header>
 
-    <div id="main" role="main" class="container">
+    <div id="main" role="main" class="entry">
       <ul class="posts">
         {% for post in paginator.posts %}
           <li class="cate-{{ post.category }}">
@@ -39,13 +39,9 @@
       </ul>
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+    <footer class="footer">
+      {% include svg-icons.html %}
+    </footer>
 
     {% include analytics.html %}
   </body>
