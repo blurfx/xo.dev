@@ -1,0 +1,22 @@
+title: Mystika
+description: Web Developer from Somewhere
+
+footer-links:
+  dribbble:
+  email:
+  facebook:
+  github: mystika
+  rss: 
+  twitter: BlurEffect
+
+google_analytics:
+
+url: http://mystika.me
+
+baseurl: ""
+permalink: none
+
+markdown: kramdown
+
+kramdown:
+    input: GFM
