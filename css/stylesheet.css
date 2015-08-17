@@ -13,6 +13,8 @@ html,body {	height: 100%; }
 
 
 .bg {
+	height:100%;
+	width:100%;
 	color: #ffffff;
   background: -webkit-linear-gradient(#50c9c3, #96deda);
   background: linear-gradient(#50c9c3, #96deda);
