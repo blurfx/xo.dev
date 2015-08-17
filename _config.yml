@@ -18,5 +18,3 @@ baseurl: ""
 markdown: kramdown
 kramdown:
     input: GFM
-include: "_categories"
-permalink: /:categories/:title/
