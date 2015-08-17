@@ -16,6 +16,8 @@ url: http://mystika.me
 baseurl: ""
 permalink: none
 
+paginate: 10
+
 markdown: kramdown
 
 kramdown:

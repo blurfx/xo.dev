@@ -26,7 +26,17 @@
     </header>
 
     <div id="main" role="main" class="container">
-      {{ content }}
+      <ul class="posts">
+        {% for post in paginator.posts %}
+          <li class="cate-{{ post.category }}">
+          <a href="{{ post.url }}">
+            <span class="category">{{ post.category }}</span>
+            <span class="title">{{ post.title }}</span>
+            <span class="time">{{ post.date | date_to_string }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
 
     <div class="wrapper-footer">
