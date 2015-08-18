@@ -15,16 +15,13 @@ a {
 }
 
 a:hover {
-  color: #e74c3c;
+  color: #913ce7;
 }
 
 pre {
-  background-color: #efefef;
+  background-color: #f0f0f0;
   padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
+  border: 1px solid #dddddd;
   margin: 20px 0 20px 0;
 }
 
@@ -46,10 +43,6 @@ code {
   margin-top: 10px;
 }
 
-.post-header {
-
-}
-
 .posts {
   max-width: 600px;
   margin: 0 auto;
@@ -68,8 +61,6 @@ code {
   display: block;
   padding: 10px;
 }
-
-
 
 .posts a:hover, a:hover .category{
   color: #ffffff;
@@ -99,6 +90,7 @@ code {
 
 .post-header .home {
   font-size: 1.5em;
+  font-weight: 700px;
 }
 
 .post-header span {
