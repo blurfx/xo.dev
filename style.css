@@ -161,6 +161,13 @@ code {
   color:#3498db;
 }
 
+.cate-diary a:hover{
+  background: #1abc9c;
+}
+.cate-diary .category, .post-info .cate-diary{
+  color:#1abc9c;
+}
+
 /* transition */
 
 .posts a, .posts .category {
