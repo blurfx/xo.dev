@@ -140,13 +140,6 @@ code {
   color: #7f8c8d;
 }
 
-.cate-life a:hover{
-  background: #e74c3c;
-}
-.cate-life .category, .post-info .cate-life{
-  color:#e74c3c;
-}
-
 .cate-dev a:hover{
   background: #9b59b6;
 }
@@ -166,6 +159,13 @@ code {
 }
 .cate-diary .category, .post-info .cate-diary{
   color:#1abc9c;
+}
+
+.cate-music a:hover{
+  background: #e67e22;
+}
+.cate-music .category, .post-info .cate-music{
+  color:#e67e22;
 }
 
 /* transition */
