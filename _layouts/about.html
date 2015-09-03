@@ -17,16 +17,12 @@
   <body>
     <header class="post-header">
       <div class="post-info">
-        <a href="{{ site.baseurl }}/" class="home">{{ site.title }}</a> <span class="cate-{{ page.category }}">{{ page.category | capitalize }}</span>
+        <a href="{{ site.baseurl }}/" class="home">{{ site.title }}</a>
       </div>
     </header>
 
     <article class="post">
       <span class="post-title">{{ page.title }}</span>
-      
-      <div class="post-date">
-        {{ page.date | date_to_string }}
-      </div>
 
       <div class="post-content">
         {{ content }}
