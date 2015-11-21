@@ -3,14 +3,14 @@
 	padding: 0;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-
 }
+
 html, body {
 	background-image: url('../i/dark_tint.png'), url('../i/bg.jpg');
 	background-position: center;
 	background-size: cover;
 	color: #fff;
+	height: 100%;
 }
 
 .wrapper {
