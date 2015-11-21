@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+}
+html, body {
+	background-image: url('../i/dark_tint.png'), url('../i/bg.jpg');
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+}
+
+.wrapper {
+	position: relative;
+	top: 48%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-align: center;
+	font-family: 'consolas', 'Roboto', 'Helvetica Neue', 'Helvetica';
+	font-size: 1.5em;
+}
+
+.me {
+	background-image: url('../i/me.png');
+	background-position: center;
+	background-size: cover;	
+	display: block;
+	margin: 0 auto 20px;
+	width: 267px;
+	height: 48px;
+	font-size: 3em;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.small {
+	color: #ddd;
+	font-size: 0.7em;
+}
+
+.nav {
+	margin-top: 10px;
+}
+
+.nav li {
+	list-style: none;
+	display: inline-block;
+}
+
+svg {
+	width: 24px; height: 24px;
+	-webkit-transition: fill .2s;
+	transition: fill .2s;
+}
+
+.twitter:hover svg, .twitter:active svg {
+	fill: #55acee;
+}
+
+.github:hover svg, .github:active svg {
+	fill: #aaaaaa;
+}
+
