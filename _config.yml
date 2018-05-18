@@ -17,7 +17,7 @@ title: blureffect
 author: blureffect
 description: blureffect
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blur.kr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blur.kr" # the base hostname & protocol for your site, e.g. http://example.com
 lang: ko
 timezone: UTC+9
 exclude:
