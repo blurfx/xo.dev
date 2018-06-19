@@ -15,25 +15,22 @@ $ npm -v
 /mnt/c/Program Files/nodejs/npm: 6: /mnt/c/Program Files/nodejs/npm: Syntax error: word unexpected (expecting "in")
 ```
 
-So I checked the location of npm binary with `which` command and it was calling npm for Windows.
+So I checked the location of npm binary with `which` command and I can see it npm is Windows binary.
 ```sh
 $ which npm
 /mnt/c/Program Files/nodejs/npm
 ```
 
-Now I know npm for Linux is not installed so, you need to install it. [check this page](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions).
+Now I know npm for Linux is not installed so, I need to install it. [check this page](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions).
 ```sh
 $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
-Finally, I can see that npm is working properly. Done!
+Finally, I can see that npm is working well. Done!
 ```sh
 $ which npm
 /usr/bin/npm
-
-$ whereis npm
-npm: /usr/bin/npm /mnt/c/Program Files/nodejs/npm /mnt/c/Program Files/nodejs/npm.cmd
 
 $ npm -v
 5.6.0
