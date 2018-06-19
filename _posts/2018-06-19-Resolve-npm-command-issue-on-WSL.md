@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resolve npm command issue on Window Subsystem Linux"
+title: "Resolve npm command issue on Windows Subsystem Linux"
 date: 2018-06-19
 categories: Tech
 comments: true
