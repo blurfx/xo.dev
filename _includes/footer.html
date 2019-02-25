@@ -1,11 +1,5 @@
-<footer class="site-footer">
+{% include svg-icons.html %}
 
-  <div class="wrapper">
-
-    <p>
-      {% include footer_content.html %}
-    </p>
-
-  </div>
-
-</footer>
+{% if site.footer-text %}
+<p>{{ site.footer-text }}</p>
+{% endif %}
