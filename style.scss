@@ -86,6 +86,8 @@ h6 {
 p {
   color: $text-color;
   margin: 15px 0;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 
 a {
