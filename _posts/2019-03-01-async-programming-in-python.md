@@ -31,51 +31,51 @@ Python 2는 두 수의 범위를 `range`와 `xrange`로 표현할 수 있습니�
 아래의 코드는 Python 3의 `range`를 흉내낸 Iterator입니다.
 
 ```python
-    class MyRange:
-    
-        def __init__(self, start, end=None, step=1):
-            if end is None:
-                end = start
-                start = 0
-    
-            self.value = start
-            self.end = end
-            self.step = step
-    
-            # 변화값이 0이라면 무한 루프에 빠지게 되므로 미리 예외 처리를 해줍니다.
-            if self.step == 0:
-                raise ValueError('"step" must not be zero')
-    
-        def __iter__(self):
-            return self
-    
-        def __next__(self):
-            # Iteration이 끝나야 하는 경우를 step의 값에 따라 처리해줍니다.
-            if (self.step > 0 and self.value < self.end) or (self.step < 0 and self.value > self.end):
-                raise StopIteration
-    
-            # 반환할 값을 미리 변수에 담아둡니다.
-            ret = self.value
-            # 그리고 다음 값을 계산하고
-            self.value += self.step
-            # 아까 담아두었던 값을 반환해줍니다.
-            return ret
-    
-    
-    for x in MyRange(10, 1, -1):
-        print(x)
-    # output: 10 9 8 7 6 5 4 3 2
-    
-    my_range = MyRange(1, 5, 2)
-    print(next(my_range))
-    # output: 1
-    
-    print(next(my_range))
-    # output: 3
-    
-    for x in MyRange(10):
-        print(x)
-    # output: 0 1 2 3 4 5 6 7 8 9
+class MyRange:
+
+    def __init__(self, start, end=None, step=1):
+        if end is None:
+            end = start
+            start = 0
+
+        self.value = start
+        self.end = end
+        self.step = step
+
+        # 변화값이 0이라면 무한 루프에 빠지게 되므로 미리 예외 처리를 해줍니다.
+        if self.step == 0:
+            raise ValueError('"step" must not be zero')
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        # Iteration이 끝나야 하는 경우를 step의 값에 따라 처리해줍니다.
+        if (self.step > 0 and self.value < self.end) or (self.step < 0 and self.value > self.end):
+            raise StopIteration
+
+        # 반환할 값을 미리 변수에 담아둡니다.
+        ret = self.value
+        # 그리고 다음 값을 계산하고
+        self.value += self.step
+        # 아까 담아두었던 값을 반환해줍니다.
+        return ret
+
+
+for x in MyRange(10, 1, -1):
+    print(x)
+# output: 10 9 8 7 6 5 4 3 2
+
+my_range = MyRange(1, 5, 2)
+print(next(my_range))
+# output: 1
+
+print(next(my_range))
+# output: 3
+
+for x in MyRange(10):
+    print(x)
+# output: 0 1 2 3 4 5 6 7 8 9
 ```
 
 ## Generator와 yield
@@ -89,26 +89,26 @@ Generator 함수는 이름 그대로 값을 생성 해주는 함수입니다.
 아래 코드는 간단한 Generator 예제입니다. 과연 출력은 어떻게 될까요?
 
 ```python
-    def hello_world():
-        yield 'Hello'
-        print('Bar')
-        yield 'World'
-    
-    
-    generator = hello_world()
-    
-    print(next(generator))
-    print('Foo')
-    print(next(generator))
+def hello_world():
+    yield 'Hello'
+    print('Bar')
+    yield 'World'
+
+
+generator = hello_world()
+
+print(next(generator))
+print('Foo')
+print(next(generator))
 ```
 
 위 코드를 실행한 출력 결과는 아래와 같습니다.
 
 ```
-    Hello
-    Foo
-    Bar
-    World
+Hello
+Foo
+Bar
+World
 ```
 
 결과를 통해서 코드의 주요 흐름을 정리하면 아래와 같겠네요!
@@ -123,24 +123,24 @@ Generator 함수는 이름 그대로 값을 생성 해주는 함수입니다.
 우리가 Iterator로 작성했던 `MyRange`를 Generator 함수로 훨씬 짧고 간결하게 작성할 수 있습니다.
 
 ```python
-    def my_range(start, end=None, step=1):
-        if end is None:
-            end = start
-            start = 0
-    
-        value = start
-    
-        if step == 0:
-            raise ValueError('"step" must not be zero')
-    
-        while (step > 0 and value < end) or (step < 0 and value > end):
-            yield value
-            value += step
-    
-    
-    for x in my_range(10, 1, -1):
-        print(x)
-    # output: 10 9 8 7 6 5 4 3 2
+def my_range(start, end=None, step=1):
+    if end is None:
+        end = start
+        start = 0
+
+    value = start
+
+    if step == 0:
+        raise ValueError('"step" must not be zero')
+
+    while (step > 0 and value < end) or (step < 0 and value > end):
+        yield value
+        value += step
+
+
+for x in my_range(10, 1, -1):
+    print(x)
+# output: 10 9 8 7 6 5 4 3 2
 ```
 
 ## Coroutine
@@ -154,14 +154,14 @@ Generator 함수는 이름 그대로 값을 생성 해주는 함수입니다.
 Generator-based Coroutine은 Generator 객체의 `send()`메서드를 호출하여 만들 수 있습니다. 위에서 만들었던 hello_word Generator를 Couroutine으로 바꾸면 아래와 같아집니다.
 
 ```python
-    def hello_world():
-    
-        name = yield 'Hello'
-        yield name + '!'
-    
-    
-    generator = hello_world()
-    print(next(generator))
-    print(generator.send('Coroutine'))
-    # output: Hello Coroutine!
+def hello_world():
+
+    name = yield 'Hello'
+    yield name + '!'
+
+
+generator = hello_world()
+print(next(generator))
+print(generator.send('Coroutine'))
+# output: Hello Coroutine!
 ```
