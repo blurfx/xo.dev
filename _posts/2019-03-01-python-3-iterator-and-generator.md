@@ -1,34 +1,50 @@
 ---
-title: Python 3 비동기 프로그래밍 (1/2) - Iterator, Generator, yield, Coroutine
+title: Python 3 Iterator와 Generator
 tags: [Python]
 layout: post
 comments: true
 ---
 
-*이 글은 Python 3.7을 기준으로 작성된 글입니다.*
+이 글에서는 Python을 쓰며 한번쯤을 들어 보았을법한 `Iterable`, `Iterator` 그리고 `Generator`에 대해 알아봅니다.
 
-Python 3는 Python 2에 비해 상당히 많은 부분이 바뀌었는데 그 중 하나가 비동기 처리 지원입니다. 3.0 버전부터 비동기 프로그래밍이 가능한 것은 아닙니다.
+## Iterable
 
-Python 3.4에서 `asyncio` 모듈이, 3.5에서 `async`/`await` 키워드가 추가되어 파이썬으로 비동기 프로그래밍을 하려면 3.4 이후의 버전을 사용해야합니다.
+Iterable이란 객체가 가지고 있는 멤버들을 하나씩 반환할 수 있는, 쉽게 말해 `for ... in`문을 사용하여 모든 멤버에 반복적으로 접근할 수 있는 객체라 생각하면 됩니다.
 
-이 글에서는 비동기 프로그래밍을 하기 전에 알아야할 기본 개념들에 대해 정리 해보도록 하겠습니다.
+쉬운 예로 Python의 대부분의 기본 컨테이너들(list, set, dict, tuple, str 등)은 기본적으로 Iterable합니다.
+
+Python의 프로그래밍적 정의는 Iterator를 반환하는 특별 메소드 `__iter__`를 가지고 있는 객체를 뜻합니다. 그러므로 위에서 나열한 기본 컨테이너들 뿐만 아니라 직접 만든 객체라도 `__iter__`와 `__next__` 메소드가 정상적으로 구현이 되어 있다면 Itertaion이 가능합니다.
+
+`__next__`함수는 호출 될 때마다 객체의 멤버들을 하나씩 반환하며 더 이상 반환할 멤버가 없다면 `StopIteration` 예외를 발생시킵니다. 이 과정을 `for ... in`문을 사용하면 아래와 같이 매우 간결하게 쓸 수 있습니다.
+
+```python
+for x in range(10):
+    print(x)
+```
+
+조금 더 깊이 파볼까요? `for ... in`은 내부적으로 아래와 같은 방식으로 값을 계속 가져옵니다.
+```python
+# iter 함수는 인자로 들어온 객체의 `__iter__`를 호출하여 i/terator를 반환합니다.
+# 그래서 변수 range_iter는 range(10)의 iterator가 됩니다.
+range_iter = iter(range(10))
+
+while True:
+    try:
+        # next 함수는 Iterator의 `__next__`를 호출하여 객체의 다음 멤버을 가져옵니다.
+        x = next(range_iter)
+        print(x)
+    except StopIteration:
+        break
+```
+
+아, `__init__`과 `__next__`의 구현은 어떻게 하냐구요? 그건 이제 설명할겁니다.
 
 ## Iterator
 
-이해를 돕기 위해 잠깐 Python 2를 기준으로 예를 들어보겠습니다.
+앞에서 설명한 Iterable 객체는 `__iter__` 메소드가 구현된 객체라고 설명했었죠? Iterator는 `__next__` 메소드가 구현된 객체를 말합니다.
+많은 경우 `__iter__`와 `__next__`모두 같은 객체에 구현해서 씁니다. `__iter__`는 `__next__`가 구현된 객체를 반환해주기만 하면 되니 같은 객체에 `__next__`를 구현했다면 객체 자기 자신을 반환해주면 되거든요!
 
-Python 2는 두 수의 범위를 `range`와 `xrange`로 표현할 수 있습니다.
-
-`xrange`는 Python 3의 `range`와 같지만 Python 2의 `range`는 지정한 범위에 있는 모든 원소를 리스트에 넣고 반환합니다. 예를 들어 `range(N)`를 호출하면 `[0, 1, 2, .., N-1]`인 리스트를 반환합니다. 이런 방식은 O(N)의 공간을 사용하게 되므로 N이 커질수록 메모리 낭비가 심해집니다.
-
-이런 문제점을 해결하기 위해 만들어진 것이 바로 **Iterator** 입니다. Iterator는 한번에 모든 값을 리스트에 넣고 반환하는 방식이 아닌 매번 다음 값을 계산하여 호출 될 때마다 반환하는 방식을 사용합니다.
-
-설명이 끝났으니 다시 Python 3로 넘어옵시다. 이제, Iterator는 어떻게 만들까요? 바로 아래와 같은 규칙을 따라 만들어주면 끝입니다.
-
-- 특별 메소드 `__iter__`가 존재해야하며 호출 시 `__next__` 메소드를 가진 객체(Iterator Object)를 반환해야 합니다.
-- `__next__`는 호출될 때마다 다음 값을 반환해야 합니다.
-
-아래의 코드는 Python 3의 `range`를 흉내낸 Iterator입니다.
+아래의 코드는 `range`를 흉내낸 Iterator입니다.
 
 ```python
 class MyRange:
@@ -77,6 +93,9 @@ for x in MyRange(10):
     print(x)
 # output: 0 1 2 3 4 5 6 7 8 9
 ```
+
+간단하죠?
+
 
 ## Generator와 yield
 
@@ -141,27 +160,4 @@ def my_range(start, end=None, step=1):
 for x in my_range(10, 1, -1):
     print(x)
 # output: 10 9 8 7 6 5 4 3 2
-```
-
-## Coroutine
-
-앞의 Generator를 구현하면서 `yield`를 사용하여 값을 가져오고 함수를 일시적으로 멈출 수 있다는 것을 알았습니다. 그런데 Generator에서 값을 지속적으로 넣어주고 싶다면 어떻게 해야할까요? 전역 변수를 사용할수도 있겠지만 좋은 방법은 아닙니다. 이럴때 `Coroutine`을 사용하여 문제를 해결 할 수 있습니다.
-
-`Coroutine`은 `Generator-based Coroutine`과 `Native Coroutine`이 있는데 이 글에서는 Generator-based Coroutine만 알아봅시다.
-
-### Generator-based Coroutine
-
-Generator-based Coroutine은 Generator 객체의 `send()`메서드를 호출하여 만들 수 있습니다. 위에서 만들었던 hello_word Generator를 Couroutine으로 바꾸면 아래와 같아집니다.
-
-```python
-def hello_world():
-
-    name = yield 'Hello'
-    yield name + '!'
-
-
-generator = hello_world()
-print(next(generator))
-print(generator.send('Coroutine'))
-# output: Hello Coroutine!
 ```
