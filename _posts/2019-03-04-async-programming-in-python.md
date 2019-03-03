@@ -6,7 +6,7 @@ comments: true
 ---
 
 *이 글은 Python 3.7을 기준으로 작성된 글입니다.*
-*Generator, Coroutine에 대해 한번도 들어보지 못하셨다면 [이전 글](/python-3-iterator-and-generator/)을 먼저 읽으시는 것을 추천드립니다.*
+*Generator, Coroutine에 대해 한번도 들어보지 못하셨다면 [이전 글](/python-3-iterator-generator-and-coroutine/)을 먼저 읽으시는 것을 추천드립니다.*
 
 Python 3는 Python 2에 비해 상당히 많은 부분이 바뀌었는데 그 중 하나가 비동기 처리 지원입니다.
 
