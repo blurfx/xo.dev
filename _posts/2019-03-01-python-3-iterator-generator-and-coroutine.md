@@ -1,5 +1,5 @@
 ---
-title: Python 3 Iterator와 Generator
+title: Python 3 Iterator와 Generator 그리고 Coroutine
 tags: [Python]
 layout: post
 comments: true
@@ -160,4 +160,27 @@ def my_range(start, end=None, step=1):
 for x in my_range(10, 1, -1):
     print(x)
 # output: 10 9 8 7 6 5 4 3 2
+```
+
+## Coroutine
+
+앞의 Generator를 구현하면서 `yield`를 사용하여 값을 가져오고 함수를 일시적으로 멈출 수 있다는 것을 알았습니다. 그런데 Generator에서 값을 지속적으로 넣어주고 싶다면 어떻게 해야할까요? 전역 변수를 사용할수도 있겠지만 좋은 방법은 아닙니다. 이럴때 `Coroutine`을 사용하여 문제를 해결 할 수 있습니다.
+
+`Coroutine`은 `Generator-based Coroutine`과 `Native Coroutine` 그리고  있는데 이 글에서는 Generator-based Coroutine만 알아봅시다.
+
+### Generator-based Coroutine
+
+Generator-based Coroutine은 Generator 객체의 `send()`메서드를 호출하여 만들 수 있습니다. 위에서 만들었던 hello_word Generator를 Couroutine으로 바꾸면 아래와 같아집니다.
+
+```python
+def hello_world():
+
+    name = yield 'Hello'
+    yield name + '!'
+
+
+generator = hello_world()
+print(next(generator))
+print(generator.send('Coroutine'))
+# output: Hello Coroutine!
 ```
