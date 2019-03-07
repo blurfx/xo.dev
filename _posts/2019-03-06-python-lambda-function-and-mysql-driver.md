@@ -21,7 +21,9 @@ MySQL 클라이언트 라이브러리가 없다고 한다. Lambda는 그래서 �
 /usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.21' not found
 ```
 
-해결 방법을 찾다가 [이 글](https://forums.aws.amazon.com/thread.jspa?threadID=284016)을 보게 되었다.
+<br>
+
+대체 뭐가 문제일까 싶어 해결 방법을 찾으려 구글링을 좀 하다가 [이 글](https://forums.aws.amazon.com/thread.jspa?threadID=284016)을 보게 되었다.
 
 결론은 AWS Lambda가 GCC와 표쥰 C++ 라이브러리를 완벽히 지원해주지 않기 때문에 링크 파일(.so)을 직접 패키지에 넣거나 다른 방법을 찾아야 한다는 것..
 
