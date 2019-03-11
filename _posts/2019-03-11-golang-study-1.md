@@ -1,5 +1,5 @@
 ---
-title: Go 언어 배우기 - Go 설치, 개발 환경 설정하기
+title: Go 언어 스터디 - (1) Go 설치, 개발 환경 설정하기
 tags: [Go]
 layout: post
 comments: true
