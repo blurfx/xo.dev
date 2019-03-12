@@ -53,7 +53,7 @@ import m "math"
 m.Max(10, 20)
 ```
 
-패키지 별명을 `.`으로 하면 해당 패키지 내에 있는 메소드를 바로 호출할 수 있다. 하지만 [공식적으로 사용하지 않는걸 권장하고 있다](https://golang.org/ref/spec#Import_declarations).
+패키지 별명을 `.`으로 설정하면 해당 패키지 내에 있는 메소드를 바로 호출할 수 있다. 하지만 [공식적으로 사용하지 않는걸 권장하고 있다](https://golang.org/ref/spec#Import_declarations).
 ```go
 import . "math"
 
