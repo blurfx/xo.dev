@@ -8,9 +8,8 @@ comments: true
 *이 시리즈는 Go 언어를 공부하며 정리용으로 쓰는 글입니다. 틀린 부분이 있다면 알려주세요 :)*
 *Go 1.12를 기준으로 합니다.*
 
-### 설치
 
-[https://golang.org/dl/](https://golang.org/dl/)에서 자신의 OS에 맞는 설치 바이너리를 내려받아 설치하면 된다.
+먼저 Go를 먼저 설치하자. [https://golang.org/dl/](https://golang.org/dl/)에서 자신의 OS에 맞는 설치 바이너리를 내려받아 설치하면 된다.
 
 macOS에서는 [Homebrew](https://brew.sh)를 사용하여 조금 더 편하게 설치할 수 있다. 아래 명령어로 설치하면 된다:
 
@@ -49,7 +48,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, World!");
+    fmt.Println("Hello, World!");
 }
 ```
 

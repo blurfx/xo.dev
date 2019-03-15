@@ -5,8 +5,6 @@ layout: post
 comments: true
 ---
 
-## 패키지
-
 Go는 Python처럼 프로그램을 하나의 패키지로 인식하는데 컴파일 할 때 "main"이라고 이름지은 패키지가 있다면 그 패키지를 컴파일한 결과물은 실행 파일이 되고, "main" 패키지의 `main`함수가 프로그램의 시작점이 된다.
 만약 프로그램이 아닌 라이브러리를 만들것이라면 main 함수를 만들거나 패키지 이름을 main이라 짓지 말아야 한다.
 
@@ -26,8 +24,8 @@ import "fmt"
 바로 아래처럼 여러 패키지들을 괄호로 묶어 선언하는 방법이다. 이를 Factored Import Declaration이라 하던데, 한국어로는 어떻게 부르는지 못 찾겠다.
 ```go
 import (
-	"fmt"
-	"math"
+    "fmt"
+    "math"
 )
 ```
 
