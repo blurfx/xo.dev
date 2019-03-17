@@ -429,6 +429,10 @@ nav {
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $divider-color;
+  
+  a {
+    border-bottom: 0;
+  }
 }
 
 .posts > .post:last-child {
@@ -437,10 +441,10 @@ nav {
 }
 
 .post {
-
   a {
     border-bottom: 1px solid #000;
   }
+
   h1 {
     margin-bottom: .1em;
   }
