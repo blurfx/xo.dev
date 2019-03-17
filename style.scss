@@ -94,6 +94,7 @@ a {
   color: $link-color;
   text-decoration: none;
   cursor: pointer;
+  border-bottom: 1px solid #000;
   &:hover, &:active {
     color: $link-color;
   }
