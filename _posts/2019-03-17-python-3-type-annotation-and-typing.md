@@ -140,8 +140,8 @@ print(get_first_item((2.0, 3.0, 4.0)))
 print(get_first_item('ABC'))
 ```
 
-여러 자료 형 중 하나를 받아야 할 때는 `TypeVar`에 여러 데이터 타입을 전달해주거나, `Union`을 사용하면 된다. 항상 값을 전달받지 않아도 되는 경우는 `Optional`을 사용한다.
-여기서 `Optional[T]`는 `Union[T, None]`과 같다.
+여러 자료 형 중 하나를 받아야 할 때는 `TypeVar`에 여러 데이터 타입을 전달해주거나, `Union`을 사용하면 된다.
+필수적인 인자가 아니라면(항상 값을 전달받지 않아도 된다면) `Optional`을 사용한다.
 ```python
 from typing import TypeVar, Union, Optional
 
@@ -149,6 +149,8 @@ from typing import TypeVar, Union, Optional
 Numeric = TypeVar('Numeric', int, float)
 Numeric2 = Union[int, float]
 OptionalNumeric = Optional[int, float]
+
+# Optional[T]는 Union[T, None]와 같다
 ```
 
 
