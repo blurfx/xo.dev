@@ -504,6 +504,7 @@ nav {
     width: 50%;
     a {
       color: $pagination-color;
+      border-bottom: 0;
       &:hover, &:focus {
         color: $pagination-over-color;
       }
@@ -516,6 +517,7 @@ nav {
     width: 50%;
     a {
       color: $pagination-color;
+      border-bottom: 0;
       &:hover, &:focus {
         color: $pagination-over-color;
       }
