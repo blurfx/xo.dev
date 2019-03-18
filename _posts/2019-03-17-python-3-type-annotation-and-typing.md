@@ -5,15 +5,15 @@ layout: post
 comments: true
 ---
 
-Python은 동적 타입 언어다. 변수를 선언할때 정수형 데이터를 대입했다 해도 나중에 다른 타입으로 변경될 수 있다는 뜻이다.
+Python은 변수의 타입이 언제든지 바뀔 수 있는 동적 타입 언어다.
 
-동적 타입의 문제는 코드가 많아질 수록 타입 체크가 힘들어진다는 것인데 Python은 그 문제를 해결하기 위해 3.5에서 Type Annotation 기능과 함께 `typing`이라는 내장 패키지가 추가되었다.
+동적 타입의 문제는 코드가 많아질수록 타입 체크가 힘들어진다는 것인데 Python은 그 문제를 해결하기 위해 3.5에서 Type Annotation 기능과 함께 `typing`이라는 내장 패키지가 추가되었다.
 
 Type Annotation이나 `typing` 패키지는 동적 타입인 파이썬을 정적 타입으로 만들어주지 않는다. 다만 변수나 함수 파라미터와 반환값이 어떤 타입인지 코드 상에서 명시할 수 있으며, 에디터 레벨에서 경고를 띄워줄 뿐이다.
 
 ## Type Annotation
 
-아래는 Type Annotation을 적용한 함수다. add 함수의 인자 x, y가 정수형이라는 것과 `-> int`표현식을 통해 함수의 반환값이 정수형이라는 것을 알 수 있다.
+아래는 Type Annotation을 적용한 함수다. add 함수의 인자 x, y가 정수형이라는 것과 `-> int` 표현식을 통해 함수의 반환값이 정수형이라는 것을 알 수 있다.
 ```python
 def add(x: int, y: int) -> int:
     return x + y
@@ -25,13 +25,13 @@ print(add('sad', ' machine'))
 ```
 
 
-\+ 연산자로 두 문자열이 연결되어 잘 출력된다. 어떠한 경고나 오류가 없다. 우리가 원하는건 이 결과가 아닌데..
+\+ 연산자로 두 문자열이 연결되어 잘 출력된다. 어떠한 경고나 오류가 없다. 우리가 원하는 건 이 결과가 아닌데..
 ```
 $ python3 app.py
 sad machine
 ```
 
-만약 PyCharm같은 에디터를 사용한다면 아래와 같이 타입에 대한 경고를 보여준다.
+만약 PyCharm 같은 에디터를 사용한다면 아래와 같이 타입에 대한 경고를 보여준다.
 ![wrong type warning in PyCharm](/images/python-3-type-annotation-and-typing/type-warning.png)
 
 하지만 Python을 쓰는 모두가 PyCharm을 사용하는 것은 아니며, 단순히 경고만 띄워주는 것으로는 동적 타입으로 인해 발생될 수 있는 문제들을 사전에 막기 힘들다. 어떻게 해결해야 할까?
@@ -54,7 +54,7 @@ app.py:5: error: Argument 2 to "add" has incompatible type "str"; expected "int"
 
 만약 int, str과 같은 단순한 타입이 아닌 조금 더 복잡한 타입을 사용한다면 `typing` 패키지를 사용하면 된다.
 
-만약 정수 값만 포함하는 리스트를 받는 다면 아래와 같이 하면 된다. 딕셔너리(Dict)와 튜플(Tuple)도 가능하다.
+만약 정수만 포함하는 리스트를 받는다면 아래와 같이 하면 된다. 딕셔너리(Dict)와 튜플(Tuple)도 가능하다.
 ```python
 from typing import List
 
@@ -88,7 +88,7 @@ print(type(id_list))
 ```
 
 ### Callable
-함수 인자에 다른 함수를 넘겨 줄때는 `Callable`를 사용하면 된다. `Callable[[인자 타입 리스트], 반환 타입]`형식으로 사용할 수 있다.
+함수 인자에 다른 함수를 넘겨 줄 때는 `Callable`를 사용하면 된다. `Callable[[인자 타입 리스트], 반환 타입]`형식으로 사용할 수 있다.
 ```python
 from typing import Callable
 
@@ -109,7 +109,7 @@ call_func(10, 20, add)
 call_func(10, 20, subtract)
 ```
 
-아래의 경우는 인자로 받는 함수의 반환 타입은 int라 명시되어 있지만, 실제 인자로 받은 함수의 반환 타입이 float이기 때문에 mypy에서 오류를 발생 시킨다.   
+아래의 경우는 인자로 받는 함수의 반환 타입은 int라 명시되어 있지만, 실제 인자로 받은 함수의 반환 타입이 float이기 때문에 mypy에서 오류를 발생시킨다.   
 ```python
 def wrong(x: int, y: int) -> float:
     return float(x + y)
@@ -124,7 +124,7 @@ call_func(10, 20, wrong)
 
 ### TypeVar, Union, Optional
 
-`TypeVar`를 사용하면 제네릭 타입을 구현할 수 있다. 아래는 모든 요소가 같은 타입으로만 이루어진 Sequence를 전달받아 첫번째 요소를 반환해주는 예제이다.
+`TypeVar`를 사용하면 제네릭 타입을 구현할 수 있다. 아래는 모든 요소가 같은 타입으로만 이루어진 Sequence를 전달받아 첫 번째 요소를 반환해주는 예제이다.
 ```python
 from typing import TypeVar, Sequence
 
@@ -156,8 +156,9 @@ OptionalNumeric = Optional[int, float]
 
 ## Conslusion
 
-- `mypy` + `typing`을 사용하면 Python에서도 타입으로 인한 사이드 이펙트를 어느정도 방지할 수 있다.
-- 본문에는 적지 않았지만, Python 3.6부터는 함수 인자 뿐만 아니라 변수들에게도 Type Annotation을 할 수 있다.
-- 매번 `mypy ...py`를 해주는건 귀찮은 일이다. `mypy`는 그래서 몇 에디터에 [플러그인](https://github.com/python/mypy#ide--linter-integrations)을 만들어 놓았으니참고하자.
-- `typing`에 대해 더 자세히 다루기에는 글이 너무 길어져서 일단 자주 사용되는 부분만 요약 해보았다. 더 자세한건 [공식 문서](https://docs.python.org/ko/3.7/library/typing.html)를 보자.
+
+- `mypy` + `typing`을 사용하면 Python에서도 타입으로 인한 사이드 이펙트를 어느 정도 방지할 수 있다.
+- 본문에는 적지 않았지만, Python 3.6부터는 함수 인자뿐만 아니라 변수들에게도 Type Annotation을 할 수 있다.
+- 매번 `mypy ...py`를 해주는 건 귀찮은 일이다. `mypy`는 그래서 몇 에디터에 [플러그인](https://github.com/python/mypy#ide--linter-integrations)을 만들어 놓았으니 참고하자.
+- `typing`에 대해 더 자세히 다루기에는 글이 너무 길어져서 일단 자주 사용되는 부분만 요약해보았다. 더 자세한건 [공식 문서](https://docs.python.org/ko/3.7/library/typing.html)를 보자.
 
