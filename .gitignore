@@ -65,4 +65,7 @@ Session.vim
 # Ignore all local history of files
 .history
 
+#
 # End of https://www.gitignore.io/api/vim,macos,jekyll,visualstudiocode
+
+**/Thumbs.db
