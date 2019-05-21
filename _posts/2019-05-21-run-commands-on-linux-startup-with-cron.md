@@ -1,6 +1,6 @@
 ---
 title: Cron을 사용하여 리눅스 시스템 시작 시 명령어 실행하기
-tags: [Web, CSS]
+tags: [Linux]
 layout: post
 comments: true
 ---
