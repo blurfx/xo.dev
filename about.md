@@ -11,7 +11,7 @@ permalink: /about/
 - Soonchunhyang University (2014.03 — PRESENT)
   + 휴학 중입니다.
 
-## Work Experience
+## Work Experiences
 - Nexon Korea (2018.03 — PRESENT)
   + 팀에서 유일한 백엔드 개발자로 일하고 있습니다.
   + 주로 TypeScript, Python을 사용하여 개발을 하고 있으며, GitLab CI/CD와 Docker를 사용한 CI/CD 파이프라인을 구성했습니다.
