@@ -27,7 +27,7 @@ permalink: /about/
   + 얼굴 인식 부분과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
 
 ## Other stuffs
-- [작곡](https://soundcloud.com/blrfx)을 합니다.
+- [작곡](https://soundcloud.com/hughinca)을 합니다.
 - [사진](https://instagram.com/blureffect)도 찍습니다.
 
 xo
