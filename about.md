@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-**Changhui Lee**, 24
+# Changhui Lee
 
 
 ## Education
