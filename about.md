@@ -8,18 +8,19 @@ permalink: /about/
 
 
 ## Education
-- Soonchunhyang University (2014.03 — PRESENT)
-  + 휴학 중입니다.
+- Soonchunhyang University (2014.03 — 2019.08)
+  + 제적되었습니다.
 
 ## Work Experiences
+- Peoplefund (2019.07 — PRESENT)
+  + 백엔드 개발자로 일하고 있습니다.
+
 - Nexon Korea (2018.03 — 2019.07)
   + 백엔드 개발자로 일했습니다.
-  + 주로 TypeScript, Python을 사용하여 개발을 하고 있으며, GitLab CI/CD와 Docker를 사용한 CI/CD 파이프라인을 구성했습니다.
+  + 주로 TypeScript, Python을 사용했으, GitLab CI/CD와 Docker를 사용한 CI/CD 파이프라인을 구성했습니다.
   + AWS ECS, Lambda, RDS, EC2 등의 AWS 서비스를 사용했습니다.
   + Vue.js와 React.js를 사용하여 프론트 개발에 참여했습니다.
   + 그 외에 여러 자동화 스크립트를 작성했습니다.
-- Peoplefund (2019.07 — PRESENT)
-  + 백엔드 개발자로 일하고 있습니다.
 
 
 ## Experiences
