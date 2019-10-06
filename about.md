@@ -27,7 +27,7 @@ permalink: /about/
 - Software Maestro (2013)
   + 얼굴 인식을 통한 졸음 운전 시스템 개발 프로젝트에 참여하였습니다.
   + C#과 Kinect API 및 OpenCV를 사용하였습니다.
-  + 얼굴 인식 부분과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
+  + 얼굴 인식 알고리즘과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
 
 ## Presentation
 - [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr)
