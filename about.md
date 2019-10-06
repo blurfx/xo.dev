@@ -17,7 +17,8 @@ permalink: /about/
 
 - Nexon Korea (2018.03 — 2019.07)
   + 백엔드 개발자로 일했습니다.
-  + 주로 TypeScript, Python을 사용했으며, GitLab CI/CD와 Docker를 사용한 CI/CD 파이프라인을 구성했습니다.
+  + 인텔리전스랩스에서 Anomaly Detection 서비스의 백엔드 및 프론트엔드 개발에 참여했습니다.
+  + 주로 TypeScript, Python을 사용했으며 GitLab CI/CD와 Docker를 사용한 CI/CD 파이프라인을 구성했습니다.
   + AWS ECS, Lambda, RDS, EC2 등의 AWS 서비스를 사용했습니다.
   + Vue.js와 React.js를 사용하여 프론트 개발에 참여했습니다.
   + 그 외에 여러 자동화 스크립트를 작성했습니다.
@@ -29,11 +30,12 @@ permalink: /about/
   + C#과 Kinect API 및 OpenCV를 사용하였습니다.
   + 얼굴 인식 부분과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
 
-## Talks
+## Presentation
 - [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr)
 
 ## Other stuffs
 - [작곡](https://soundcloud.com/finchhead)을 합니다.
 - [사진](https://instagram.com/blureffect)도 찍습니다.
 
-xo
+
+~xo
