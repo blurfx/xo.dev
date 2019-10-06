@@ -8,8 +8,7 @@ permalink: /about/
 
 
 ## Education
-- Soonchunhyang University (2014.03 — 2019.08)
-  + 제적되었습니다.
+- Soonchunhyang University (2014.03 — 제적)
 
 ## Work Experiences
 - Peoplefund (2019.07 — PRESENT)
