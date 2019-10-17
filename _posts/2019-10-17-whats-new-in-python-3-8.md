@@ -85,8 +85,8 @@ class Student(Person):
 from typing import Final
 
 
-name: Final[str] = 'blurfxo'
-# 혹은 name: Final = 'blurfxo'
+name: Final[str] = 'blurfx'
+# 혹은 name: Final = 'blurfx'
 ```
 
 ## [리터럴 타입](https://www.python.org/dev/peps/pep-0586/)
