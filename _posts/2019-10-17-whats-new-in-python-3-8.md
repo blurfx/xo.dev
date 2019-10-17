@@ -12,21 +12,21 @@ comments: true
 파이썬의 `=`는 구분자로 취급되어 조건문에 섞어서 사용할 수 없었는데, 대입 표현식을 사용하면 같은 코드를 조금 더 짧게 작성할 수 있다.
 
 기존 코드:
-```pythoon
+```python
 n = len(name)
 if n > 9:
     # ...
 ```
 
 대입 표현식을 사용한 코드
-```
+```python
 if (n := len(name)) > 9:
     # ...
 ```
 
 물론, 리스트 컴프리헨션에도 사용할 수 있다.
 ```python
-[]
+[text for x in data if (text := parse(x))]
 ```
 
 # [위치 전용 매개 변수](https://www.python.org/dev/peps/pep-0570/)
