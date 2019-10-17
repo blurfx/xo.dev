@@ -24,7 +24,7 @@ if (n := len(name)) > 9:
     # ...
 ```
 
-물론, 리스트 컴프리헨션에도 사용할 수 있다.
+리스트 컴프리헨션에 사용한 예
 ```python
 [text for x in data if (text := parse(x))]
 ```
