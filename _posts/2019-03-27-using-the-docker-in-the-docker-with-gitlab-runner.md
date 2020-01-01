@@ -14,7 +14,7 @@ Perhaps iptables or your kernel needs to be upgraded.
 (exit status 3)
 ```
 
-하지만 GitLab Runner의 privileged 설정은 이미 켜져있어서 권한 문제는 아니라는 생각이 들었고, 조금 검색해보니 Linux 내의 Docker와 호스트 Docker가 같은 소켓을 사용하여 해결할 수 있다는 [글](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)을 찾았다.
+하지만 GitLab Runner의 privileged 설정은 이미 켜져있어서 권한 문제는 아니라는 생각이 들었고, 조금 검색해보니 Linux 내의 Docker와 호스트 Docker가 같은 소켓을 사용하여 해결할 수 있다는 [글](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)을 찾았다.
 
 위 설정을 적용하려면 GitLab Runner의 설정 파일을 열어 `runners.docker` 섹션의 `volumes` 값에 `var/run/docker.sock:/var/run/docker.sock`를 추가해주면 된다.
 ```toml
