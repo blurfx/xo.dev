@@ -50,6 +50,11 @@ vim /etc/ssh/sshd_config
 PermitRootLogin yes
 ```
 
+위 작업은 아래 명령어를 사용해 한번에 할 수 있다.
+```
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+```
+
 이제 아래 명령어를 통해 root계정의 비밀번호를 변경해주자. 실제 유저는 여기서 설정한 비밀번호로 접속을 할 것이다.
 ```sh
 passwd root
