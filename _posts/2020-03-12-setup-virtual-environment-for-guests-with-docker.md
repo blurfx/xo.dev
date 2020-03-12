@@ -20,12 +20,12 @@ docker pull ubuntu:18.04
 
 그다음 이미지를 실행시켜준다. 이때 ssh와 웹으로 접근하기 위해 22, 80, 443번 포트를 열어야 하는데 호스트의 포트를 그대로 사용할 수 없으니 나는 적당히 98xx, 9433 포트로 바인딩해 주었다. **꼭 이 포트가 아니어도 된다.**
 ```sh
-docker run -dit -p 9822:22 -p 9880:80 -p 9443:443 --name CONTAINER_NAME ubuntu:18.04
+docker run -dit -p 9822:22 -p 9880:80 -p 9443:443 --name [CONTAINER_NAME] ubuntu:18.04
 ```
 
 이제 컨테이너 안으로 들어가 추가적인 설정을 해주어야 하므로 bash(혹은 sh)를 사용하여 컨테이너로 들어가자.
 ```sh
-docker exec -it CONTAINER_NAME bash
+docker exec -it [CONTAINER_NAME] bash
 ```
 
 패키지 매니저를 업데이트하고 기본적으로 필요한 패키지를 설치하자. `openssh-server`는 ssh로 접속할 수 있도록 해준다.
