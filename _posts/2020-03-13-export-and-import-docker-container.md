@@ -12,7 +12,7 @@ comments: true
 docker run -dit -v ~/guest1:/ ubuntu:18.04
 ```
 
-아래와 같이 루트 디렉터리는 볼륨으로 바인딩 할 수 없다는 오류를 볼 수 있다.
+루트 디렉터리는 볼륨으로 바인딩 할 수 없다는 오류를 볼 수 있다.
 ```
 docker: Error response from daemon: invalid volume specification: '/home/ubuntu/guest1:/': invalid mount config for type "bind": invalid specification: destination can't be '/'.
 ```
