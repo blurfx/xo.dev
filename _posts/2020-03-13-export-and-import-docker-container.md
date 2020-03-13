@@ -5,7 +5,7 @@ layout: post
 comments: true
 ---
 
-[이전 글]([/setup-virtual-environment-for-guests-with-docker/])에서는 Docker를 사용해 게스트 유저가 서버를 운영할 수 있는 가상 환경을 만드는 것을 했다. 그런데 이전 글을 잘 보면 Volume 설정을 하지 않아 컨테이너를 종료하면 컨테이너 내의 모든 작업 내역이 유실된다.
+[이전 글](/setup-virtual-environment-for-guests-with-docker/)에서는 Docker를 사용해 게스트 유저가 서버를 운영할 수 있는 가상 환경을 만드는 것을 했다. 그런데 이전 글을 잘 보면 Volume 설정을 하지 않아 컨테이너를 종료하면 컨테이너 내의 모든 작업 내역이 유실된다.
 
 모든 데이터를 보존하려 아래와 같이 컨테이너의 루트 디렉터리를 호스트와 공유하여 데이터를 동기화해보는 방법을 시도할 수는 있겠지만,
 ```sh
