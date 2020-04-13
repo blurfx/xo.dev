@@ -8,11 +8,16 @@ permalink: /about/
 
 
 ## Education
+- Korea National Open University (2020.02 - PRESENT)
 - Soonchunhyang University (2014.03 — 제적)
 
 ## Work Experiences
-- Peoplefund (2019.07 — PRESENT)
-  + 백엔드 개발자로 일하고 있습니다.
+- Peoplefund (2019.07 — 2020.04)
+  + 백엔드 개발자로 일했습니다.
+  + 피플펀드 대출 서비스의 백엔드 기능을 고도화 하였습니다.
+  + django-admin을 확장하여 다른 자바스크립트 모듈을 연동하는 작업을 하였습니다.
+  + NHN Toast UI에서 TIFF 및 PDF 파일을 수정할 수 있도록 작업했습니다.
+  + User flow에 웹과 ActiveX가 섞여있는 복합적인 태스크를 Python과 C#을 사용하여 자동화하였습니다.
 
 - Nexon Korea (2018.03 — 2019.07)
   + 백엔드 개발자로 일했습니다.
@@ -33,8 +38,7 @@ permalink: /about/
 - [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr) and [Startup Tech Challenge](https://tech.peoplefund.co.kr/2019/10/14/startup-tech-challenge-4th-epilogue.html)
 
 ## Other stuffs
-- [작곡](https://soundcloud.com/finchhead)을 합니다.
-- [사진](https://instagram.com/blureffect)도 찍습니다.
+- 사진을 찍습니다. [Instagram](https://instagram.com/blureffect)과 [Unsplash](https://unsplash.com/@changhui)에서 볼 수 있습니다.
 
 
 ~xo
