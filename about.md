@@ -35,7 +35,7 @@ permalink: /about/
   + 얼굴 인식 알고리즘과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
 
 ## Presentation
-- [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr) and [Startup Tech Challenge](https://tech.peoplefund.co.kr/2019/10/14/startup-tech-challenge-4th-epilogue.html)
+- [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr)
 
 ## Other stuffs
 - 사진을 찍습니다. [Instagram](https://instagram.com/blureffect)과 [Unsplash](https://unsplash.com/@changhui)에서 볼 수 있습니다.
