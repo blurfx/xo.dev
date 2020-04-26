@@ -12,6 +12,9 @@ permalink: /about/
 - Soonchunhyang University (2014.03 — 제적)
 
 ## Work Experiences
+- MakinaRocks (2020.04 — PRESENT)
+  + 백엔드 개발자로 일하고 있습니다.
+
 - Peoplefund (2019.07 — 2020.04)
   + 백엔드 개발자로 일했습니다.
   + 피플펀드 대출 서비스의 백엔드 기능을 고도화 하였습니다.
@@ -29,7 +32,10 @@ permalink: /about/
 
 
 ## Experiences
-- Software Maestro (2013)
+- Sullivan Project (2020.04 — PRESENT)
+  + 웹 분야의 선생님으로 활동하고 있습니다.
+
+- Software Maestro (2013. 07 — 2013. 12)
   + 얼굴 인식을 통한 졸음 운전 시스템 개발 프로젝트에 참여하였습니다.
   + C#과 Kinect API 및 OpenCV를 사용하였습니다.
   + 얼굴 인식 알고리즘과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
