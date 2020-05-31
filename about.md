@@ -9,7 +9,7 @@ permalink: /about/
 
 ## Education
 - Korea National Open University (2020.02 - PRESENT)
-- Soonchunhyang University (2014.03 — 제적)
+- Soonchunhyang University (2014.03 — 자퇴)
 
 ## Work Experiences
 - MakinaRocks (2020.04 — PRESENT)
@@ -44,6 +44,7 @@ permalink: /about/
 - [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr)
 
 ## Other stuffs
+- 취미로 알고리즘 문제를 해결합니다. [BOJ](https://www.acmicpc.net/user/mystika)
 - 사진을 찍습니다. [Instagram](https://instagram.com/blureffect)과 [Unsplash](https://unsplash.com/@changhui)에서 볼 수 있습니다.
 
 
