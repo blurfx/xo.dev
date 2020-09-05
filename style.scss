@@ -28,13 +28,98 @@
 /* BASE RULES */
 /**************/
 
+:root {
+  --background-color: #{$white};
+  
+  --base-color: #{$base-color};
+  --base-lighten-color: #{$base-lighten-color};
+  
+  --text-color: #{$text-color};
+  --link-color: #{$link-color};
+  --link-border-color: #{$black};
+
+  --site-name-color: #{$darkGray};
+  --masthead-color: #{$lightGray};
+  --divider-color: #{$divider-color};
+
+  --tag-color: #{$tag-index-label-color};
+  --tag-bg-color: #{$tag-index-label-background-color};
+  --tag-count-bg-color: #{$tag-index-count-background-color};
+  --nav-color: #{$darkGray};
+
+  --pagination-color: #{$pagination-color};
+  --pagination-over-color: #{$pagination-over-color};
+
+  --footer-border-color: #{$footer-border-color};
+  --footer-background-color: #{$footer-background-color};
+  --footer-icon-color: #{$footer-icon-color};
+  
+  @media (prefers-color-scheme: dark) {
+
+    --background-color: #{$dark-bg-color};
+
+    --base-color: #{$dark-text-color};
+    --base-lighten-color: #{$dark-base-lighten-color};
+    
+    --text-color: #{$dark-text-color};
+    --link-color: #{$dark-link-color};
+    --link-border-color: #{$dark-link-border-color};
+
+    --site-name-color: #{$dark-site-name-color};
+    --masthead-color: #{$dark-masthead-color};
+    --divider-color: #{$dark-divider-color};
+
+    --tag-color: #{$dark-tag-index-label-color};
+    --tag-bg-color: #{$dark-tag-index-label-background-color};
+    --tag-count-bg-color: #{$dark-tag-index-count-background-color};
+    --nav-color: #{$dark-nav-color};
+
+    --pagination-color: #{$dark-pagination-color};
+    --pagination-over-color: #{$dark-pagination-over-color};
+
+    --footer-border-color: #{$dark-footer-border-color};
+    --footer-background-color: #{$dark-footer-background-color};
+    --footer-icon-color: #{$dark-footer-icon-color};
+  }
+}
+
+::placeholder {
+  color: #bab0a1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: #585b0e !important;
+  color: #f4ede1 !important;
+}
+::-webkit-scrollbar {
+  background-color: #222423;
+  color: #b2a99a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4a4c4c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5d6160;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #4d504f;
+}
+::-webkit-scrollbar-corner {
+  background-color: #1a1b1a;
+}
+* {
+  scrollbar-color: #222423 #4a4c4c;
+}
+
 html {
   font-size: $base-font-size;
 }
 
 body {
   font-family: $base-font;
-  color: $base-color;
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -76,26 +161,26 @@ h3 {
 
 h4 {
   font-size: 16px;
-  color: $base-lighten-color;
+  color: var(--base-lighten-color);
 }
 
 h6 {
-  color: $base-lighten-color;
+  color: var(--base-lighten-color);
 }
 
 p {
-  color: $text-color;
+  color: var(--text-color);
   margin: 15px 0;
   word-break: keep-all;
   word-wrap: break-word;
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: none;
   cursor: pointer;
   &:hover, &:active {
-    color: $link-color;
+    color: var(--link-color);
   }
 }
 
@@ -119,7 +204,7 @@ sup {
 
 hr {
   border: 0;
-  border-top: 1px solid $divider-color;
+  border-top: 1px solid var(--divider-color);
   margin: 1.5em auto;
 }
 
@@ -235,7 +320,7 @@ blockquote {
   border-left: .2em solid $blockquote-border-color;
 
   p {
-    color: $blockquote-color;
+    color: var(--base-lighten-color);
   }
 
   p:last-child {
@@ -266,7 +351,7 @@ a.footnote {
 }
 
 .footnotes {
-  border-top: 1px solid $divider-color;
+  border-top: 1px solid var(--divider-color);
   font-size: $small-font-size;
 }
 
@@ -333,7 +418,7 @@ img {
 
 .masthead {
   padding: 40px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--masthead-color);
 
   @include mobile {
     text-align: center;
@@ -369,7 +454,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: var(--site-name-color);
   cursor: pointer;
   font-family: $base-font;
   font-weight: 500;
@@ -379,7 +464,7 @@ img {
 
 .site-name-bold {
   margin: 0;
-  color: $darkGray;
+  color: var(--site-name-color);
   cursor: pointer;
   font-family: $base-font;
   font-weight: 600;
@@ -413,7 +498,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: var(--nav-color);
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -428,7 +513,7 @@ nav {
 // Posts
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $divider-color;
+  border-bottom: 1px solid var(--divider-color);
   
   a {
     border-bottom: 0;
@@ -442,7 +527,7 @@ nav {
 
 .post {
   a {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--link-border-color);
   }
 
   h1 {
@@ -452,7 +537,7 @@ nav {
   .date {
     font-weight: 300;
     font-size: $small-font-size;
-    color: $base-lighten-color;
+    color: var(--base-lighten-color);
     margin-right: 3px;
   }
 
@@ -472,8 +557,8 @@ nav {
       > a {
         margin: 3px 3px 3px 0;
         padding: .5px 4px;
-        color: $tag-index-label-color;
-        background-color: $tag-index-label-background-color;
+        color: var(--tag-color);
+        background-color: var(--tag-bg-color);
         border-radius: 3px;
         border-bottom: 0;
       }
@@ -491,7 +576,7 @@ nav {
 
 .about {
   a {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--link-border-color);
   }
 }
 
@@ -509,10 +594,10 @@ nav {
     float: left;
     width: 50%;
     a {
-      color: $pagination-color;
+      color: var(--pagination-color);
       border-bottom: 0;
       &:hover, &:focus {
-        color: $pagination-over-color;
+        color: var(--pagination-over-color);
       }
     }
   }
@@ -522,10 +607,10 @@ nav {
     text-align: right;
     width: 50%;
     a {
-      color: $pagination-color;
+      color: var(--pagination-color);
       border-bottom: 0;
       &:hover, &:focus {
-        color: $pagination-over-color;
+        color: var(--pagination-over-color);
       }
     }
   }
@@ -534,10 +619,10 @@ nav {
 // Archive
 .archive {
   a {
-    color: $base-color;
+    color: var(--base-color);
   }
   time {
-    color: $base-lighten-color;
+    color: var(--base-lighten-color);
     font-size: $small-font-size;
     font-weight: 300;
     margin-left: 3px;
@@ -559,8 +644,8 @@ nav {
     > a {
       display: inline-block;
       margin: 1px;
-      color: $tag-index-label-color;
-      background-color: $tag-index-label-background-color;
+      color: var(--tag-color);
+      background-color: var(--tag-bg-color);
       border-radius: 3px;
 
       span {
@@ -568,7 +653,7 @@ nav {
         padding: .5px 5px;
 
         &.count {
-          background-color: $tag-index-count-background-color;
+          background-color: var(--tag-count-bg-color);;
           border-radius: 0 3px 3px 0;
         }
       }
@@ -578,10 +663,10 @@ nav {
 
 .tags > .tag {
   a {
-    color: $base-color;
+    color: var(--base-color);
   }
   time {
-    color: $base-lighten-color;
+    color: var(--base-lighten-color);
     font-size: $small-font-size;
     font-weight: 300;
     margin-left: 3px;
@@ -591,9 +676,9 @@ nav {
 // Footer
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid $footer-border-color;
-  border-bottom: 1px solid $footer-border-color;
-  background-color: $footer-background-color;
+  border-top: 1px solid var(--footer-border-color);
+  border-bottom: 1px solid var(--footer-border-color);
+  background-color: var(--footer-background-color);
 }
 
 footer {
@@ -619,6 +704,7 @@ footer {
     svg {
       height: 30px;
       width: 30px;
+      fill: var(--footer-icon-color);
     }
 
     em {
