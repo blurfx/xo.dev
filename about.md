@@ -19,7 +19,7 @@ permalink: /about/
   + 백엔드 개발자로 일했습니다.
   + 피플펀드 대출 서비스의 백엔드 기능을 고도화 하였습니다.
   + django-admin을 확장하여 다른 자바스크립트 모듈을 연동하는 작업을 하였습니다.
-  + NHN Toast UI에서 TIFF 및 PDF 파일을 수정할 수 있도록 작업했습니다.
+  + NHN Toast Image Editor에서 TIFF 및 PDF 파일을 수정할 수 있도록 작업했습니다.
   + User flow에 웹과 ActiveX가 섞여있는 복합적인 태스크를 Python과 C#을 사용하여 자동화하였습니다.
 
 - Nexon Korea (2018.03 — 2019.07)
@@ -32,8 +32,6 @@ permalink: /about/
 
 
 ## Experiences
-- Sullivan Project (2020.04 — PRESENT)
-  + 웹 분야의 선생님으로 활동하고 있습니다.
 
 - Software Maestro (2013. 07 — 2013. 12)
   + 얼굴 인식을 통한 졸음 운전 시스템 개발 프로젝트에 참여하였습니다.
