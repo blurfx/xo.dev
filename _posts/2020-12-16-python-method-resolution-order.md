@@ -9,7 +9,7 @@ comments: true
 
 프로그래밍을 하다 보면 우리는 상위 클래스의 멤버들을 하위 클래스에 물려받는 상속이라는 행위를 한다. 보통은 하나의 부모 클래스만 상속받지만 종종 아래 그림과 같이 여러 부모 클래스를 상속받는 경우가 있다. 만약 여기서 우리가 `D` 클래스에서 상속받은 `foo` 메서드를 호출했다면 어느 부모 클래스에 있는 메서드를 호출해야 할까? `B`? 아니면 `C`? 그것도 아니면 둘 다? 만약 둘 다 호출한다면 어떤 클래스의 메서드를 먼저 호출해야 할까? 답이 없을 것이다. 이런 애매모호한 다중 상속 구조를 **죽음의 다이아몬드**라 한다.
 
-![Deadly Diamond of Death](/images/python-method-resolution-order/ddd.png?_=1)
+![Deadly Diamond of Death](/images/python-method-resolution-order/ddd.png)
 
 # 메서드 결정 순서
 
