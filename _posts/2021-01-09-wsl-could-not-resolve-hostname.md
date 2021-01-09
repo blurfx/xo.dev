@@ -23,7 +23,7 @@ ping: github.com: Temporary failure in name resolution
 
 도메인 리졸빙은 DNS가 담당하므로 DNS 서버에 문제가 있다고 생각했고, DNS를 변경하기로 했다. 나는 WSL에 Ubuntu 20.04를 사용하고 있으므로 이를 기준으로 작성한다.
 
-먼저 WSL에서 DNS 설정은 자동으로 설정되도록 되어있다. 그래서 수동으로 변경하려면 wsl 설정을 정의해주어야 한다. `/etc/wsl.conf` 파일에 아래 내용을 추가하면 된다.
+먼저 WSL에서 DNS 설정은 WSL 실행 시 자동으로 설정된다. 그래서 수동으로 변경하려면 wsl 설정을 변경해 주어야 한다. `/etc/wsl.conf` 파일에 아래 내용을 추가하면 된다.
 
 ```ini
 [network]
@@ -36,4 +36,4 @@ nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
 
-마지막으로 윈도우 터미널에서 `wsl --shutdown` 명령어를 사용하여 wsl 인스턴스를 종료하고 다시 시작해주면 된다.
+마지막으로 윈도우 터미널에서 `wsl --shutdown` 명령어를 사용하여 wsl 인스턴스를 종료하고 다시 시작하면 된다.
