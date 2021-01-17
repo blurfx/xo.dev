@@ -52,7 +52,7 @@
     "react/no-unescaped-entities": "warn",
     "react/jsx-props-no-spreading": "warn",
     "jsx-a11y/anchor-is-valid": "warn",
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/no-use-before-define": [
       "error"
     ]
@@ -65,6 +65,7 @@
       ]
     },
     "import/resolver": {
+      "typescript": {},
       "node": {
         "paths": [
           "."
