@@ -1,3 +1,17 @@
 {
-  "name": "~/xo.dev"
+  "name": "~/xo.dev",
+  "navigation": [
+    {
+      "name": "Posts",
+      "path": "/posts/"
+    },
+    {
+      "name": "Tags",
+      "path": "/tags/"
+    },
+    {
+      "name": "About",
+      "path": "/about/"
+    }
+  ]
 }

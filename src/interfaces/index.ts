@@ -1,5 +1,11 @@
+interface NavigationItem {
+  name: string;
+  path: string | URL,
+}
+
 export interface BlogConfig {
   name: string;
+  navigation: NavigationItem[],
 }
 
 declare module 'styled-components' {
@@ -7,6 +13,8 @@ declare module 'styled-components' {
     colors: {
       background: string,
       blogName: string,
+      mobileNav: string,
+      headerDivider: string,
     };
   }
 }
