@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react';
+import { Theme } from '@interfaces';
 
-type Theme = 'light' | 'dark';
 interface IThemeContext {
   theme: Theme,
   toggleTheme: () => void,
@@ -13,9 +13,9 @@ interface Props {
 const ThemeContext = React.createContext<IThemeContext>({} as IThemeContext);
 
 const ThemeContextProvider = ({ children }: Props): JSX.Element => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>(Theme.Light);
   const toggleTheme = (): void => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light);
   };
 
   return (

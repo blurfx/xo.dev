@@ -8,13 +8,34 @@ export interface BlogConfig {
   navigation: NavigationItem[],
 }
 
+export interface FrontMatter {
+  title: string;
+  excerpt?: string;
+  tags?: string[];
+}
+
+export interface Post extends FrontMatter {
+  date: string;
+  slug: string;
+}
+
+export const enum Theme {
+  Light = 'light',
+  Dark = 'dark',
+}
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
-      background: string,
-      blogName: string,
-      mobileNav: string,
-      headerDivider: string,
+      white: string,
+      whitesmoke: string,
+      lightestGray: string,
+      lightGray: string,
+      silver: string,
+      gray: string,
+      darkGray: string,
+      charcoal: string,
+      blue: string,
     };
   }
 }

@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const BlogNameWrapper = styled.div`
   margin: 0;
 
-  color: var(--darkGray);
+  color: var(--blog-name);
   text-align: center;
 
   ${media.greaterThan(breakpoints.small)} {
@@ -27,11 +27,19 @@ export const BlogNameWrapper = styled.div`
   }
 `;
 
+export const ThemeToggleContainer = styled.div`
+  display: inline-block;
+`;
+
 export const Anchor = styled.a`
+  display: inline-block;
+  
   text-decoration: none;
 `;
 
 export const BlogName = styled.h1`
+  margin: 0;
+        
   font-weight: 500;
   font-size: 1.6em;
   
