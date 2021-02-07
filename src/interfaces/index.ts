@@ -22,6 +22,15 @@ export interface Post extends FrontMatter {
   slug: string;
 }
 
+export interface PostResponse {
+  posts: Post[];
+  pagination: {
+    currentPage: number;
+    hasPrev: boolean;
+    hasNext: boolean;
+  }
+}
+
 export enum Theme {
   Light = 'light',
   Dark = 'dark',

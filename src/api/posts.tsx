@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import frontMatter from '@utils/front-matter';
-import { Post } from '@interfaces';
+import { Post, PostResponse } from '@interfaces';
+import { getConfig } from '@api/config';
 
 const postDirectory = path.join(process.cwd(), 'posts');
 const regex = new RegExp(/(\d{4}-\d{1,2}-\d{1,2})-([\w\W]+).mdx?/);
@@ -26,7 +27,7 @@ const parsePostData = (filename: string): Post => {
   };
 };
 
-const getPosts = (): Post[] => {
+export const getAllPosts = (): Post[] => {
   const fileNames = fs.readdirSync(postDirectory);
   const posts = fileNames.map((filename: string) => parsePostData(filename));
 
@@ -36,6 +37,24 @@ const getPosts = (): Post[] => {
     }
     return -1;
   });
+};
+
+const Posts = getAllPosts();
+
+const getPosts = (page: number): PostResponse => {
+  const { pagination } = getConfig();
+  const offset = pagination.size * (page - 1);
+  const posts = Posts.slice(offset, offset + pagination.size);
+  const totalPages = Math.ceil(Posts.length / pagination.size);
+
+  return {
+    posts,
+    pagination: {
+      currentPage: page,
+      hasPrev: page > 1,
+      hasNext: page < totalPages,
+    },
+  };
 };
 
 export default getPosts;

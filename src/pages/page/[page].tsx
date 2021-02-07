@@ -1,29 +1,34 @@
 import React from 'react';
-import getPosts from '@api/posts';
+import getPosts, { getAllPosts } from '@api/posts';
 import { getConfig } from '@api/config';
 import Posts from '@components/Posts';
-import { Post } from '@interfaces';
+import { Post, PostResponse } from '@interfaces';
 import BaseLayout from '@layouts/BaseLayout';
+import Paginator from '@components/Paginator';
 
-interface PageProps {
-  posts: Post[];
-}
+const Page = ({ posts, pagination }: PostResponse): JSX.Element => {
+  const { currentPage, hasPrev, hasNext } = pagination;
 
-const Page = ({ posts }: PageProps) => (
-  <BaseLayout title='Home | Next.js + TypeScript Example'>
-    <Posts>
-      {posts.map((post: Post) => <Posts.Item key={post.slug} post={post} />)}
-    </Posts>
-  </BaseLayout>
-);
+  return (
+    <BaseLayout title='Home | Next.js + TypeScript Example'>
+      <Posts>
+        {posts.map((post: Post) => <Posts.Item key={post.slug} post={post} />)}
+      </Posts>
+      <Paginator
+        currentPage={currentPage}
+        hasPrevPage={hasPrev}
+        hasNextPage={hasNext}
+      />
+    </BaseLayout>
+  );
+};
 
 export async function getStaticPaths() {
-  const posts = getPosts();
+  const posts = getAllPosts();
   const { pagination } = getConfig();
   const totalPages = Math.ceil(posts.length / pagination.size);
   const paths = Array(totalPages).fill(0).map((_, index) => ({ params: { page: `${index + 1}` } }));
 
-  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -32,19 +37,16 @@ export async function getStaticPaths() {
 
 interface StaticProps {
   params: {
-    page: number;
+    page: string;
   }
 }
 
 export async function getStaticProps({ params: { page } }: StaticProps) {
-  const posts = getPosts();
-  const { pagination } = getConfig();
-  const offset = pagination.size * (page - 1);
-  const chunks = posts.slice(offset, offset + pagination.size);
+  const response = getPosts(parseInt(page, 10));
 
   return {
     props: {
-      posts: chunks,
+      ...response,
     },
   };
 }
