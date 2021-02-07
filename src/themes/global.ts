@@ -29,6 +29,28 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  ::-webkit-scrollbar {
+      color: #b2a99a;
+
+      background-color: #222423;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: #4a4c4c;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      background-color: #5d6160;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+      background-color: #4d504f;
+  }
+
+  ::-webkit-scrollbar-corner {
+      background-color: #1a1b1a;
+  }
+
   html {
     font-size: var(--base-font-size);
   }
