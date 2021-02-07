@@ -37,8 +37,9 @@
       "prefer-single"
     ],
     "indent": ["error", 2],
-    "import/prefer-default-export": "off",
     "import/extensions": "off",
+    "import/order": "error",
+    "import/prefer-default-export": "off",
     "react/jsx-filename-extension": [
       "warn",
       {

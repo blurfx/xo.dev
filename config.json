@@ -1,5 +1,8 @@
 {
   "name": "~/xo.dev",
+  "pagination": {
+    "size": 10
+  },
   "navigation": [
     {
       "name": "Posts",

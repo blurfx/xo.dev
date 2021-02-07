@@ -27,7 +27,7 @@ const PostItem = ({ post }: Props): JSX.Element => {
       <div>
         <Date>{ date }</Date>
         <Tags>
-          { tags.map((tag) => <Tags.Tag href={`/tags/#${tag}`} label={tag} />)}
+          { tags.map((tag) => <Tags.Tag key={tag} href={`/tags/#${tag}`} label={tag} />)}
         </Tags>
       </div>
       { !excerpt && (

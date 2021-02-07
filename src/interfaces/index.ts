@@ -5,6 +5,9 @@ interface NavigationItem {
 
 export interface BlogConfig {
   name: string;
+  pagination: {
+    size: number;
+  }
   navigation: NavigationItem[],
 }
 
@@ -19,7 +22,7 @@ export interface Post extends FrontMatter {
   slug: string;
 }
 
-export const enum Theme {
+export enum Theme {
   Light = 'light',
   Dark = 'dark',
 }

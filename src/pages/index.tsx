@@ -1,28 +1,27 @@
 import React from 'react';
-import Posts from '@components/Posts';
+import { getConfig } from '@api/config';
 import getPosts from '@api/posts';
 import { Post } from '@interfaces';
-import BaseLayout from '../layouts/BaseLayout';
+import Page from '@pages/page/[page]';
 
 interface Props {
   posts: Post[];
 }
 
 const IndexPage = ({ posts }: Props): JSX.Element => (
-  <BaseLayout title='Home | Next.js + TypeScript Example'>
-    <Posts>
-      {posts.map((post: Post) => <Posts.Item key={post.slug} post={post} />)}
-    </Posts>
-  </BaseLayout>
+  <Page posts={posts} />
 );
 
 export default IndexPage;
 
 export async function getStaticProps() {
   const posts = getPosts();
+  const { pagination } = getConfig();
+  const chunks = posts.slice(0, pagination.size);
+
   return {
     props: {
-      posts,
+      posts: chunks,
     },
   };
 }
