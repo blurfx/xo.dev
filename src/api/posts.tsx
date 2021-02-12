@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import frontMatter from '@utils/front-matter';
+import parsePost from '@utils/parsePost';
 import { Post, PostResponse } from '@interfaces';
 import { getConfig } from '@api/config';
 
@@ -18,12 +18,13 @@ const parsePostData = (filename: string): Post => {
 
   const fullPath = path.join(postDirectory, filename);
   const fileContents = fs.readFileSync(fullPath, { encoding: 'utf8' });
-  const matter = frontMatter(fileContents);
+  const { frontmatter, content } = parsePost(fileContents);
 
   return {
     date,
     slug,
-    ...matter,
+    ...frontmatter,
+    content,
   };
 };
 

@@ -17,9 +17,15 @@ export interface FrontMatter {
   tags?: string[];
 }
 
+export interface PostParseResult {
+  frontmatter: FrontMatter,
+  content: string;
+}
+
 export interface Post extends FrontMatter {
   date: string;
   slug: string;
+  content: string;
 }
 
 export interface PostResponse {
