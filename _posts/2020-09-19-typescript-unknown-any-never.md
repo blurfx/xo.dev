@@ -88,7 +88,7 @@ const fetchFriendsOfUser = (username: string): never => {
 }
 ```
 
-`never`를 사용하면 그리고 타입 추론에서 예외 타입들을 걸러내는 역할도 합니다. 예를 들어 아래의 NonString 타입은 어떤 타입이든 될 수 있지만 `string` 타입인 경우는 `never`로 추론하여 `string` 타입의 값이 할당되지 못하도록 할 수 있습니다.
+`never`를 사용하여 특정 타입 값을 할당받지 않도록 하는것도 가능합니다. 예를 들어 아래의 NonString 타입은 어떤 타입이든 될 수 있지만 `string` 타입인 경우는 `never`로 추론하여 `string` 타입의 값이 할당되지 못하도록 할 수 있습니다.
 ```typescript
 type NonString<T> = T extends string ? never : T;
 ```
