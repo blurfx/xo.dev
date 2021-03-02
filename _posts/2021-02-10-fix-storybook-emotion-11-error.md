@@ -82,5 +82,5 @@ module.exports = {
 ```
 ### FYI
 
-- Storybook은 `.storybook/main.js` 파일의 `webpackFinal` 필드를 통해 Storybook의 webpack 설정을 제공한다. \[[ref](https://storybook.js.org/docs/react/configure/webpack)]
+- Storybook 빌드 시 사용할 webpack 설정을 변경하고 싶다면 `.storybook/main.js` 파일의 `webpackFinal` 필드를 통해 변경할 수 있다. \[[ref](https://storybook.js.org/docs/react/configure/webpack)]
 - webpack의 `resolve.alias`로 모듈에 대한 alias를 만들 수 있다. \[[ref](https://webpack.js.org/configuration/resolve/#resolvealias)]
