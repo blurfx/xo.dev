@@ -13,7 +13,11 @@ permalink: /about/
 
 ## Work Experiences
 - MakinaRocks (2020.04 — PRESENT)
-  + 백엔드 개발자로 일하고 있습니다.
+  + 백엔드와 프론트엔드 개발자로 일하고 있습니다.
+  + Python과 aiohttp를 사용하여 머신러닝 모델 학습 및 배포 관리 플랫폼 개발에 참여했습니다.
+  + 데이터 수집 및 머신러닝 모델 관리 서비스의 백엔드 개발에 참여했습니다.
+  + 데이터 관리 및 EDA 레포트 서비스의 프론트엔드 개발에 참여했습니다.
+  + 프론트엔드 UI 컴포넌트 라이브러리 개발을 리드하고 있습니다.
 
 - Peoplefund (2019.07 — 2020.04)
   + 백엔드 개발자로 일했습니다.
@@ -44,6 +48,7 @@ permalink: /about/
 ## Other stuffs
 - 취미로 알고리즘 문제를 해결합니다. [BOJ](https://www.acmicpc.net/user/mystika)
 - 사진을 찍습니다. [Instagram](https://instagram.com/blureffect)과 [Unsplash](https://unsplash.com/@changhui)에서 볼 수 있습니다.
+- 작곡을 합니다. [SoundCloud](https://soundcloud.com/chaui)
 
 
 ~xo
