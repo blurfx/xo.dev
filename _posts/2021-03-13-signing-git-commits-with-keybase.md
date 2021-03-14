@@ -69,6 +69,21 @@ B. `.gitconfig` 파일을 직접 열고 아래 내용 추가하기 (보통 `~/.g
 
 이제 커밋을 할때마다 PGP키로 서명하는 프롬프트가 나오게된다.
 
+# GitHub에 공개키 추가하기
+
+먼저 Keybase에서 공개키를 추출하여 복사한다.
+```sh
+keybase pgp export
+```
+
+그 다음, GitHub의 [키 설정 페이지](https://github.com/settings/keys)에 접속하고, `New GPG Key` 버튼을 눌러 키 등록 페이지로 들어간다.
+
+그 후 앞에서 복사한 공개키를 붙여넣으면 된다.
+
+이 과정이 필요한 이유는 GitHub에서 서명된 커밋에 사용된 키가 실제로 유저의 공개키와 맞는지 확인하기 위함이다.
+
+만약 이 작업을 진행하지 않는다면 서명된 커밋을 해도 `Unverifed`라 나오게된다.
+
 
 ## Troubleshooting
 
