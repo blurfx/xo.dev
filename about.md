@@ -48,7 +48,7 @@ permalink: /about/
 ## Other stuffs
 - 취미로 알고리즘 문제를 해결합니다. [BOJ](https://www.acmicpc.net/user/mystika)
 - 사진을 찍습니다. [Instagram](https://instagram.com/blureffect)과 [Unsplash](https://unsplash.com/@changhui)에서 볼 수 있습니다.
-- 작곡을 합니다. [SoundCloud](https://soundcloud.com/chaui)
+- 음악을 만듭니다. [SoundCloud](https://soundcloud.com/chaui)
 
 
 ~xo
