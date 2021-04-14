@@ -90,3 +90,29 @@ keybase pgp export
 macOS의 문제인지는 모르겠지만, 커밋 메시지 작성 후 서명을 하려고 하면 `gpg`에서 데이터를 서명하는데 실패했다는 오류가 발생한다.
 
 이 경우 터미널에 `export GPG_TTY=$(tty)` 명령어를 실행하면 잘 작동한다.
+
+*2021. 04. 14. 추가*
+
+StackOverflow에 같은 문제에 관한 [질문](https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0)이 올라와 있어 해결 방법을 소개한다.
+
+먼저 `gpg`를 업데이트 하고, symlink를 다시 생성한다.
+
+```sh
+brew upgrade gnupg
+brew link --overwrite gnupg
+```
+
+그리고 Pinentry-mac을 설치한다.
+```sh
+brew install pinentry-mac
+```
+
+Pinentry-mac이 설치되었다면 `~/.gnupg/gpg-agent.conf` 파일에 아래 내용을 추가한다. 이미 pinentry-program이 설정되어 있다면 경로만 변경해준다.
+```
+pinentry-program /usr/local/bin/pinentry-mac
+```
+
+마지막으로 변경한 설정을 적용하기 위해 `killall gpg-agent` 명령어로 gpg-agent 데몬을 종료시킨다. 
+
+이제 다음부터는 새 쉘 인스턴스가 실행될 때마다 `export GPG_TTY=$(tty)`를 할 필요가 없다.
+
