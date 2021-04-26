@@ -12,8 +12,11 @@ permalink: /about/
 - Soonchunhyang University (2014.03 — 자퇴)
 
 ## Work Experiences
-- MakinaRocks (2020.04 — PRESENT)
-  + 백엔드와 프론트엔드 개발자로 일하고 있습니다.
+- Devsisters (2021.04 — PRESENT)
+  + 프론트엔드 개발자로 일하고 있습니다. 
+
+- MakinaRocks (2020.04 — 2021.04)
+  + 백엔드와 프론트엔드 개발자로 일했습니다.
   + Python과 aiohttp를 사용하여 머신러닝 모델 학습 및 배포 관리 플랫폼 개발에 참여했습니다.
   + 데이터 수집 및 머신러닝 모델 관리 서비스의 백엔드 개발에 참여했습니다.
   + 데이터 관리 및 EDA 레포트 서비스의 프론트엔드 개발에 참여했습니다.
