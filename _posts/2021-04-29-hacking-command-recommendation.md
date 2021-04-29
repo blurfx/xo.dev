@@ -149,7 +149,7 @@ function didYouMean(command: string, commands: string[], limit: number = 5): str
   }
 
   // 거리 오름차순으로 명령어 후보들을 정렬한다.
-	candidates.sort((a, b) => a.dist - b.dist);
+  candidates.sort((a, b) => a.dist - b.dist);
   
   // 그 후 거리가 최소 거리 + 2 이하인 명령어들만 골라내어 반환한다.
   // + 2는 추천 범위를 넓히기 위해 넣었다.
