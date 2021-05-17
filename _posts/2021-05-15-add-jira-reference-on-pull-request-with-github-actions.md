@@ -63,10 +63,10 @@ jobs:
           issuePattern="([A-Z]{1}[A-Z0-9]+-[0-9]+)"
           titlePattern="^[[(]?${issuePattern}[])]?.+$"
 
-          if [[ ${{ github.head_ref }} =~ ^$issuePattern$ ]] || [[ ${{ github.event.pull_request.title }} =~ $titlePattern ]]; then
+          if [[ '${{ github.head_ref }}' =~ ^$issuePattern$ ]] || [[ '${{ github.event.pull_request.title }}' =~ $titlePattern ]]; then
             issueId=${BASH_REMATCH[1]}
             badgeMsg=`echo $issueId | sed 's/-/--/'`
-            
+
             echo ::set-output name=issue::$issueId
             echo ::set-output name=badge-msg::$badgeMsg
           fi
@@ -77,3 +77,4 @@ jobs:
           body: "[![${{ steps.vars.outputs.issue }}](https://img.shields.io/badge/JIRA-${{ steps.vars.outputs.badge-msg}}-blue)](${{ secrets.JIRA_BASE_URL }}/browse/${{ steps.vars.outputs.issue }})\n${{ github.event.pull_request.body }}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
