@@ -45,6 +45,9 @@ permalink: /about/
   + C#과 Kinect API 및 OpenCV를 사용하였습니다.
   + 얼굴 인식 알고리즘과 WPF를 사용한 데모 클라이언트 개발을 맡았습니다.
 
+## Open Source Contribution
+- [gatsby-source-strapi](https://github.com/strapi/gatsby-source-strapi) - ([#224](https://github.com/strapi/gatsby-source-strapi/pull/224)) `bug fix`
+
 ## Presentation
 - [정적 타입 검사로 더 나은 Python 코드 작성하기](https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking) at [PyCon Korea 2019](https://www.pycon.kr)
 
