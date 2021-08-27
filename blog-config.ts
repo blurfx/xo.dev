@@ -3,6 +3,7 @@ const config = {
   author: 'Changhui Lee', // Your name
   description: '넥슨과 마키나락스에서 백엔드 개발자로 일하다가 현재는 데브시스터즈에서 프론트엔드 개발자로 일하고 있습니다. 분야에 상관없이 소프트웨어를 개발하는 일을 사랑하며, 일을 제대로 잘하는 것에 관심이 많습니다.',
   siteUrl: 'https://xo.dev',
+  thumbnail: '/thumbnails/main.png',  // Default blog thumbnail. i.e. '/thumbnails/main.png'
   social: {
     github: 'blurfx',   // GitHub username
     twitter: '',        // Twitter username
