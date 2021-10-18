@@ -62,7 +62,9 @@ const Seo = ({ description, lang, meta = [], title, noSiteName = false }: Props)
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="naver-site-verification" content="91028619d71dd5aa795a020fd1f92b3acc40e59e" />
+    </Helmet>
   );
 };
 
