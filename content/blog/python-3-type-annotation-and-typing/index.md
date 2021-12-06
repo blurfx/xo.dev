@@ -153,8 +153,7 @@ OptionalNumeric = Optional[int, float]
 ```
 
 
-## Conslusion
-
+## 정리
 
 - `mypy` + `typing`을 사용하면 Python에서도 타입으로 인한 사이드 이펙트를 어느 정도 방지할 수 있다.
 - 본문에는 적지 않았지만, Python 3.6부터는 함수 인자뿐만 아니라 변수들에게도 Type Annotation을 할 수 있다.
