@@ -9,7 +9,7 @@ tags: [Shell]
 ## Homebrew
 
 가장 먼저 Homebrew를 설치했다. arm64용 Homebrew와 x86 Homebrew를 분리해서 설치했다.
-```sh
+```bash
 # Install Homebrew at /opt/homebrew (for Apple Silicon)
 arch -arm64e /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -21,7 +21,7 @@ arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebr
 
 그다음 Zsh 설정을 했다. zsh가 실행된 아키텍처 환경에 따라 PATH를 다르게 설정했고, x86 환경의 zsh와 arm64 환경의 zsh를 빠르게 실행하는 alias를 추가했다.
 
-```sh
+```bash
 if [[ $(arch) == "arm64" ]]; then
   export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 else
@@ -39,7 +39,7 @@ alias zx="arch -arch x86_64 /bin/zsh"
 Zsh 테마로 Powerlevel10k를 사용하는데, 터미널이 x86 환경인 경우에는 터미널 프롬프트에 무언가 표시를 해주고 싶었다.
 
 그래서 Powerlevel10k의 커스텀 프롬프트를 만들었다. 일반적으로 홈 디렉터리에 위치하는 `.p10k.zsh`을 열어 아래의 함수를 추가하고 (어디에 넣을지 모르겠다면 파일 내에서 `prompt_example`을 찾아 그 근처에 두면 된다)
-```sh
+```bash
 function prompt_arch() {
   if [[ $(arch) == "i386" ]]; then
    p10k segment -t '🐢'
@@ -53,7 +53,7 @@ function instant_prompt_arch() {
 
 이후 `POWERLEVEL9K_LEFT_PROMPT_ELEMENTS` 리스트에 `arch`를 추가해 주면 된다. 그러면 이제 아래와 같이 x86 환경인 경우에는 귀여운 거북이가 나온다.
 
-```sh
+```bash
 # arm64
 ~/personal/dotfiles main ❯
 
@@ -81,7 +81,7 @@ shell:
     - tmux
 ```
 
-아래처럼 arm64 Homebrew 바이너리 디렉토리에 있는 tmux 바이너리를 직접 바라보게 변경해야 했다. `where`나 `which` 명령어를 통해 tmux 바이너리의 경로를 찾아보면 아래와 같은 경로가 나왔지만 기존 설정을 사용하면 뭐가 문제인지 tmux가 바로 종료되더라.
+아래처럼 arm64 Homebrew 바이너리 디렉터리에 있는 tmux 바이너리를 직접 바라보게 변경해야 했다. `where`나 `which` 명령어를 통해 tmux 바이너리의 경로를 찾아보면 아래와 같은 경로가 나왔지만 기존 설정을 사용하면 뭐가 문제인지 tmux가 바로 종료되더라.
 ```yaml
 shell:
   program: /bin/zsh
