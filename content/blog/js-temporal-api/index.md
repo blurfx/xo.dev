@@ -2,6 +2,7 @@
 title: JavaScript에서 날짜, 시간과 Temporal API
 date: "2021-12-26"
 tags: [JavaScript]
+description: JavaScript의 Date API를 대체할 Temporal API에 대해 알아봅니다.
 ---
 
 # JavaScript와 시간, 날짜 그리고 `Date`
