@@ -54,30 +54,38 @@ Temporal API는 정말 많은 개선이 있는데요, 위에 적어놓았던 문
 
 ## 현재 날짜와 시간 가져오기
 
+현재 시간과 날짜에 대한 정보는 `Temporal.Now` 객체를 사용하여 알 수 있습니다.
+
 ```javascript
 // 현재 시간대를 가져옵니다.
-Temporal.Now.timeZone(); // TimeZone 객체를 반환합니다.
+Temporal.Now.timeZone(); // Temporal.TimeZone 객체를 반환합니다.
 
 Temporal.Now.timeZone().id; // "Asia/Seoul"
 
 // 현재 시간대의 
 Temporal.Now.zonedDateTimeISO();
 
-// 아이슬란드의 수도, 레이캬비크의 헌재 시간을 가져옵니다.
+// 아이슬란드의 수도, 레이캬비크의 현재 시간을 가져옵니다.
 Temporal.Now.zonedDateTimeISO('Atlantic/Reykjavik')
+
+// 프랑스 파리의 현재 시간을 가져옵니다.
+Temporal.Now.zonedDateTimeISO('Europe/Paris')
 ```
 
 ## Unix Timestamp 가져오기
 
-Instant 클래스를 사용하여 현재 시간, 혹은 주어진 시간의 타임스탬프를 가져올 수 있고, `epochNanoseconds` 필드를 통해 나노초 단위의 정확한 시간을 가져올 수 있습니다.
+Instant 클래스를 사용하여 주어진 시간의 타임스탬프를 가져올 수 있고, `epochNanoseconds` 필드를 통해 나노초 단위의 정확한 시간을 가져올 수 있습니다.
 
 ```javascript
-// Unix timestamp를 가져옵니다.
+// 현재 시간에 대한 Unix timestamp를 가져옵니다.
 Temporal.Now.instant().epochSeconds;
 Temporal.Now.instant().epochMilliseconds;
 
 // 나노초 단위의 Unix timestamp를 가져옵니다. 값의 타입은 BigInt입니다.
 Temporal.Now.instant().epochNanoseconds;
+
+// 임의의 시간에 대한 Unix timestamp도 가져올 수 있습니다.
+Temporal.Instant.from('2021-12-27T01:44+09:00').epochNanoseconds;
 Temporal.Instant.from('2021-12-27T01:44+09:00[Asia/Seoul]').epochNanoseconds;
 ```
 
