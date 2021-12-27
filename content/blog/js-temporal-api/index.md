@@ -38,7 +38,7 @@ JavaScript는 Date API를 왜 이렇게 불편하게 설계했을까요? 그 원
 
 갑자기 JavaScript 얘기하다 말고 Java가 무슨 소리냐고요? 보통 JavaScript와 Java를 `돌과 돌고래` 같은 비유로 둘은 아무 관련이 없다고 많은 분들이 말씀하지만, 사실 JavaScript는 Java에서 많은 영향을 받았습니다. 그래서 이름도 **Java**Script인 것이고요. Date API 역시 Java의 영향을 굉장히 많이 받았는데 사실 영향을 많이 받은 정도가 아니고 Java의 `java.util.Date` 패키지의 쌍둥이 수준으로 비슷하게 구현되었습니다. 실제로 예전 Java의 [java.util.Date 패키지 문서](https://docs.oracle.com/javase/7/docs/api/java/util/Date.html)를 보면 JavaScript의 `Date`와 아주 유사한 것을 확인할 수 있습니다.
 
-시간이 흐르고 Java는 Java 8을 기점으로 현대적인 시간/날짜 관리 패키지인 `java.time`을 추가하면서 `java.util.Date`와 멀어졌습니다. 그리고 오랜 시간 동안 JavaScript는 아직까지 `Date`를 사용하고 있습니다. 저희는 언제까지 불편하고 오래된 API를 가진 `Date`를 써야 하는 것일까요?
+시간이 흐르고 Java는 Java 8을 기점으로 현대적인 시간/날짜 관리 패키지인 `java.time`을 추가하면서 `java.util.Date`와 멀어졌지만 JavaScript는 아직까지 `Date`를 사용하고 있습니다. 저희는 언제까지 불편하고 오래된 API를 가진 `Date`를 써야 하는 것일까요?
 
 # Temporal API
 
