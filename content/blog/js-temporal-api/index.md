@@ -42,9 +42,11 @@ JavaScript는 Date API를 왜 이렇게 불편하게 설계했을까요? 그 원
 
 # Temporal API
 
-사실 JavaScript도 현대적인 시간/날짜 API를 준비하고 있습니다. 바로 [Temporal API](https://tc39.es/proposal-temporal/)입니다. 아직은 표준에 포함되지 않았지만 Stage 3 Proposal로 곧 표준에 포함될 것으로 예상됩니다. 하지만 아직 표준이 정립되지 않은 만큼 이 글에서 소개하는 내용도 추후에 충분히 바뀔 수 있다는 것을 먼저 말씀드립니다.
+사실 JavaScript도 현대적인 시간/날짜 API를 준비하고 있습니다. 바로 [Temporal API](https://tc39.es/proposal-temporal/)입니다. 앞에서 `Date` API가 Java에서 많은 영향을 받았다고 했듯이 이 `Temporal` API 역시 Java의 `java.time.temporal` 인터페이스에서 많은 영향을 받았습니다.
 
-Temporal API는 정말 많은 개선이 있는데요, 위에 적어놓았던 문제들이 해결되었습니다.
+참고로, 아직은 표준에 포함된 기능은 아니며 Stage 3 Proposal 상태로 곧 표준에 포함될 것으로 예상됩니다. 표준 명세를 정립하는 단계인만큼 이 글에서 소개하는 내용도 추후에 충분히 바뀔 수 있다는 것을 먼저 말씀드립니다.
+
+Temporal API는 정말 많은 개선이 있는데요, 그 중에서도 위에 적어놓았던 문제들이 모두 해결되었습니다.
 
 - 사용하기 편리한 날짜, 시간 연산을 지원합니다.
 - 모든 시간대를 지원하며, 일광 절약 시간도 지원합니다.
@@ -119,6 +121,8 @@ Temporal.PlainMonthDay.from('02-21');
 
 ## Temporal 객체에서 시간/날짜 값 가져오기
 
+시간과 날짜 정보를 담고있는 `Temporal.ZonedDateTime` 객체로부터 시간과 날짜 정보를 가져올 수 있습니다.
+
 ```javascript
 const t = Temporal.ZonedDateTime.from({
   timeZone: 'Asia/Seoul',
@@ -146,7 +150,7 @@ t.daysInYear; // 365 (윤년이면 366이 됩니다)
 당연히 객체 분해 할당을 이용하여 값을 가져오는 것도 가능합니다.
 
 ```javascript
-const { year, month, day, hour, ...rest} = Temporal.ZonedDateTime.from({
+const { year, month, day, hour, ...rest } = Temporal.ZonedDateTime.from({
   timeZone: 'Asia/Seoul',
   year: 2021,
   month: 12,
@@ -165,8 +169,8 @@ const { year, month, day, hour, ...rest} = Temporal.ZonedDateTime.from({
 `Date`와 다르게 `Temporal` 객체는 불변입니다. 이를 이용해 기존 객체에 영향을 주지 않고 연산을 할 수 있습니다.
 
 ```javascript
-// Temporal.ZonedDateTime <2021-12-27T02:10:44.422640043+09:00[Asia/Seoul]>
 // 현재 시간은 오전 2021년 12월 27일 오전 2시 10분 44초입니다.
+// Temporal.ZonedDateTime <2021-12-27T02:10:44.422640043+09:00[Asia/Seoul]>
 const t = Temporal.Now.zonedDateTimeISO();
 
 // 2시간 10분을 더해 오전 4시 20분 44초가 되었습니다.
