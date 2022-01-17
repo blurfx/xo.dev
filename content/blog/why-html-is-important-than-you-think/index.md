@@ -152,6 +152,8 @@ Phrasing content는 텍스트 조각이나 문단 수준의 텍스트를 나타�
 
 웹 접근성에는 위의 간단한 예제 외에도 저시력 시각 장애, 전맹 장애, 동작 장애 외에도 청각, 손 운동, 색맹 등 고려해야 할 사항이 정말 많습니다. 일이 더 많아진다고 느낄 수 있겠지만 웹 서비스를 만들때 접근성을 조금이라도 더 생각한다면 지금보다 더 사용하기 편한 웹 서비스들이 많아질 것 같습니다. 다수가 사용하는 웹 서비스도 좋지만 모두가 사용하는 웹 서비스는 더 좋으니까요. 웹 접근성에 더 자세히 알고 싶으시다면 아래의 링크를 참고해주세요.
 
+- [W3C 웹 표준성 가이드라인](https://www.w3.org/WAI/standards-guidelines/aria/)
+- [MDN 웹 접근성 문서](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [네이버 널리](https://nuli.navercorp.com/)
 - [네이버 웹 접근성 체험관](https://nax.naver.com/index)
 - [유성두님 블로그](https://www.sungdoo.dev/)
