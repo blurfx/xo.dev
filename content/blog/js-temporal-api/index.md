@@ -30,7 +30,7 @@ tomorrow.setHours(today.getHours() + 1, today.getMinutes() + 30);
 ```
 
 
-위의 코드를 보면 단순한 연산이지만, 사용하기에는 썩 좋지 않습니다. 그래서 보통 서드파티 시간/날짜 라이브러리를 많이 사용합니다. 예전에는 [moment.js](https://momentjs.com/)를 많이 사용했었고 최근에는 [date-fns](https://date-fns.org/)나 [Day.js](https://day.js.org/) 사용하죠.
+위의 코드를 보면 단순한 연산이지만, 사용하기에는 썩 좋지 않습니다. 그래서 보통 서드파티 시간/날짜 라이브러리를 많이 사용합니다. 예전에는 [moment.js](https://momentjs.com/)를 많이 사용했었고 최근에는 [date-fns](https://date-fns.org/)나 [Day.js](https://day.js.org/)를 많이 사용하죠.
 
 ## `Date`의 역사 
 
