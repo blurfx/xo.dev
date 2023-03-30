@@ -1,35 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
-    "declaration": false,
-    "declarationMap": false,
-    "lib": ["ESNext", "dom"],
-    "jsx": "preserve",
-    "noEmit": true,
-    "strict": true,
-    "esModuleInterop": true,
+    "target": "ES2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
     "skipLibCheck": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "src/__generated__/gatsby-types.ts",
-      "src/themes/types/index.ts"
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
     ],
     "baseUrl": ".",
     "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"],
       "~/*": ["./src/*"]
     }
   },
   "include": [
-    "src/**/*",
-    "typings/*",
-    "gatsby-config.ts",
-    "gatsby-node.ts",
-    "gatsby-browser.ts",
-    "gatsby-ssr.tsx",
-    "blog-config.ts",
-    "lint-staged.config.js",
-    "src/stitches.config.ts"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".contentlayer/generated",
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

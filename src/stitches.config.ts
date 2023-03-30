@@ -1,102 +1,92 @@
 import { createStitches } from '@stitches/react';
+export const { getCssText, globalCss, styled, createTheme, css, keyframes } =
+  createStitches({
+    theme: {
+      colors: {
+        gray1: '#fff',
+        gray2: '#f1f1f1',
+        gray3: '#ececec',
+        gray4: '#bdbdbd',
+        gray5: '#949494',
+        gray6: '#71717a',
+        gray7: '#52525b',
+        gray8: '#383838',
+        gray9: '#161616',
+        gray10: '#080808',
 
-export const { styled, css, getCssText, createTheme, globalCss } = createStitches({
-  prefix: '',
-  theme: {
-    colors: {
-      gray100: '#f6f6f6',
-      gray200: '#ddd',
-      gray300: '#a0aec0',
-      gray400: '#68768a',
-      gray500: '#495467',
-      gray600: '#2d3748',
-      gray700: '#1a202c',
-      white: '#fff',
-      black: '#000',
-      yellow: '#ffd75e',
-      yellowAccent: '#ffa659',
+        blue1: '#c3c4cd',
 
-      primary100: '#edeafc',
-      primary200: '#bcb2f5',
-      primary300: '#816eec',
-      primary400: '#3b1de2',
-      primary500: '#24128a',
+        primaryGradient1: 'hsl(300 95% 80%)',
+        primaryGradient2: 'hsl(346 96% 77%)',
+        primaryGradient3: 'hsl(358 97% 60%)',
+        secondaryGradient1: 'hsl(191 96% 89%)',
+        secondaryGradient2: 'hsl(232 96% 89%)',
+        secondaryGradient3: 'hsl(282 97% 88%)',
+        cardGradient1: 'rgba(148, 152, 240, 0.1)',
+        cardGradient2: 'rgba(223, 92, 208, 0.1)',
+        cardGradient3: 'rgba(232, 98, 98, 0.1)',
 
-      text100: '$gray300',
-      text200: '$gray400',
-      text300: '$gray500',
-      text400: '$gray600',
-      text500: '$gray700',
+        textPrimary: '$gray10',
+        textSecondary: '$gray7',
+        textTertiary: '$gray6',
 
-      backgroundColor: '$white',
-
-      borderGray: '$gray200',
-      borderPrimary: '$primary200',
-
-      inlineCodeBackground: '#404040',
-      inlineCodeColor: '#ffc7d2',
-      link: '$primary400',
-
-      titleFilterBackground: '$gray100',
-      tagColor: '$primary400',
-      tagFilterBackground: '$primary100',
-
-      headerCircleColor: '$primary200',
-
-      themeSwitchBackground: '$gray500',
+        bgColor: '$gray1',
+        headerContainerBg: 'rgba(255, 255, 255, 0.6)',
+        separator: '$blue1',
+        inlineCodeBg: '$gray3',
+        codeBlockBg: '$gray2',
+        tableBorder: '$gray4',
+        blockquoteBorder: '$gray6',
+        hr: '$gray4',
+        tooltipColor: '$primaryGradient2',
+        tooltipBg: '$gray1',
+      },
+      zIndices: {
+        texture: 100,
+      },
+      sizes: {
+        contentWidth: '700px',
+        navItemSize: '2.5rem',
+      },
+      radii: {
+        xs: '4px',
+        sm: '6px',
+      },
     },
-    sizes: {
-      contentWidth: '43.75rem',
+    media: {
+      sm: '(max-width: 767.98px)',
+      md: '(max-width: 991.98px)',
+      lg: '(max-width: 1199.98px)',
+      xl: '(max-width: 1399.98px)',
     },
-    shadows: {
-      themeSymbol: '$colors$gray400',
+    utils: {
+      py: (value: string | number) => ({
+        paddingTop: value,
+        paddingBottom: value,
+      }),
+      px: (value: string | number) => ({
+        paddingLeft: value,
+        paddingRight: value,
+      }),
+      my: (value: string | number) => ({
+        marginTop: value,
+        marginBottom: value,
+      }),
     },
-    transitions: {
-      transitionDuration: '0.2s',
-      transitionTiming: 'ease-in',
-      switchTransitionDuration: '0.1s',
-    },
-  },
-  media: {
-    md: '(min-width: 48em)',
-  },
-});
+  });
 
-
-export const darkTheme = createTheme('dark-theme', {
+export const darkTheme = createTheme('dark', {
   colors: {
-    gray100: '#303136',
-    gray200: '#3d4144',
-    gray300: '#d6cfc4',
-    gray400: '#b8ae9f',
-    gray500: '#cfc8bc',
-    gray600: '#e5dfd6',
-    gray700: '#f6f1ea',
-    black: '#222425',
-
-    primary100: '#edeafc',
-    primary200: '#b9acff',
-    primary300: '#816eec',
-    primary400: '#3b1de2',
-    primary500: '#221182',
-
-    text100: '$gray300',
-    text200: '$gray400',
-    text300: '$gray500',
-    text400: '$gray600',
-    text500: '$gray700',
-
-    backgroundColor: '$black',
-
-    borderGray: '$gray200',
-    borderPrimary: '$primary200',
-
-    link: '$primary200',
-
-    titleFilterBackground: '$gray200',
-    tagColor: '$primary400',
-    tagFilterBackground: '$primary100',
-
-    headerCircleColor: '$gray200',
+    textPrimary: '$gray3',
+    textSecondary: '$gray4',
+    textTertiary: '$gray5',
+    bgColor: '$gray9',
+    headerContainerBg: 'rgba(22,22,22, 0.6)',
+    inlineCodeBg: '$gray8',
+    codeBlockBg: '$gray10',
+    hr: '$gray7',
+    blockquoteBorder: '$gray5',
+    tooltipColor: '$secondaryGradient3',
+    tooltipBg: '$gray10',
   },
 });

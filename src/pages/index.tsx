@@ -1,122 +1,69 @@
-import { PageProps, graphql } from 'gatsby';
-import React, { useCallback, useRef } from 'react';
+import { InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
 
-import ArticleFilter from '~/components/ArticleFilter';
-import ArticleList from '~/components/ArticleList';
-import Profile from '~/components/Profile';
-import Seo from '~/components/Seo';
-import { TAG } from '~/constants';
-import { useArticleTags } from '~/hooks/useArticleTags';
-import { useInfiniteScroll } from '~/hooks/useInfiniteScroll';
-import { usePage } from '~/hooks/usePage';
-import { useSearchFilter } from '~/hooks/useSearchFilter';
-import { useSeo } from '~/hooks/useSeo';
-import { useTag } from '~/hooks/useTag';
-import Layout from '~/layout';
-import { filterPostsByTag, filterPostsByTitle } from '~/utils/filterPosts';
+import Card from '~/components/card';
+import CardContainer from '~/components/card-container';
+import Content from '~/components/content';
+import Section from '~/components/section';
+import SectionList from '~/components/section-list';
+import generateRssFeed from '~/utils/generateRssFeed';
+import { getSortedPosts } from '~/utils/post';
 
-
-const BlogIndex = ({ data, location }: PageProps<GatsbyTypes.BlogIndexQuery>) => {
-  const infiniteScrollRef = useRef(null);
-  const [page, setPage] = usePage();
-  const [titleFilter, setTitleFilter] = useSearchFilter();
-  const [currentTag, setCurrentTag] = useTag();
-  const siteMetadata = useSeo().site?.siteMetadata;
-  const tags = useArticleTags().allMarkdownRemark?.distinct as string[];
-
-  const siteUrl = data.site?.siteMetadata?.siteUrl ?? '';
-  const siteTitle = data.site?.siteMetadata?.title ?? '';
-  const siteThumbnail = data.site?.siteMetadata?.thumbnail;
-  const posts = filterPostsByTag(
-    filterPostsByTitle(
-      data.allMarkdownRemark.nodes, titleFilter),
-    currentTag
-  );
-  const articlePerPage = 5;
-  const totalPage = Math.ceil(posts.length / articlePerPage);
-
-  const onTitleFilterChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    setTitleFilter(event.target.value);
-  }, []);
-
-  const resetFilter = () => {
-    setTitleFilter('');
-    setCurrentTag(TAG.ALL);
-  };
-
-  const meta: Metadata[] = [];
-  if (siteThumbnail) {
-    const properties = ['og:image', 'twitter:image'];
-
-    for (const property of properties) {
-      meta.push({
-        property,
-        content: `${siteUrl}${siteThumbnail}`,
-      });
-    }
-  }
-
-  useInfiniteScroll(infiniteScrollRef, useCallback(() => {
-    if (page < totalPage) {
-      setPage(page + 1);
-    }
-  }, [page, setPage, totalPage]));
-
-
+const HomePage = ({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <Layout location={location} title={siteTitle} resetFilter={resetFilter}>
-      <Seo
-        lang='en'
-        title={siteMetadata?.title ?? ''}
-        description={siteMetadata?.description ?? ''}
-        meta={meta}
-        noSiteName
-      />
-      <Profile />
-      <ArticleFilter
-        tags={tags}
-        titleFilter={titleFilter}
-        onTitleFilterChange={onTitleFilterChange}
-        currentTag={currentTag}
-        setCurrentTag={setCurrentTag}
-      />
-      {posts.length === 0 ? (
-        <p>
-          No posts found.
-        </p>
-      ): (
-        <>
-          <ArticleList posts={posts.slice(0, page * articlePerPage)} />
-        </>
-      )}
-      <div className='infinite-scroll' ref={infiniteScrollRef}/>
-    </Layout>
+    <SectionList>
+      <Section title={'Changhui Lee'}>
+        <Content>
+          <p>분야에 상관없이 소프트웨어를 개발하는 일을 사랑하며, 일을 제대로 잘하는 것에 관심이 많습니다.</p>
+          <p>종종 <Link href={'https://unsplash.com/@changhui'}>사진</Link>을 찍고 글을 씁니다. 다양한 기술에 관심이 많으며 특히 Go를 좋아합니다.</p>
+        </Content>
+      </Section>
+      <Section title={'Articles'}>
+        <CardContainer direction={'row'}>
+          {posts.map((post) => (
+            <Card
+              key={post.url}
+              title={post.title}
+              description={post.description}
+              date={post.date}
+              url={post.url}
+            />
+          ))}
+        </CardContainer>
+      </Section>
+      <Section title={'Talks'}>
+        <CardContainer>
+          <Card
+            title={'프론트엔드에서 함수형을 추구하면 안되는걸까?'}
+            description={'JSConf Korea 2022'}
+            date={'2022-09-16'}
+            url={'https://2022.jsconf.kr/speakers/minsu-kim-changhui-lee'}
+          />
+          <Card
+            title={'정적 타입 검사로 더 나은 Python 코드 작성하기'}
+            description={'PyCon KR 2019'}
+            date={'2019-08-17'}
+            url={'https://speakerdeck.com/blur/python-type-hinting-and-static-type-checking'}
+          />
+        </CardContainer>
+      </Section>
+    </SectionList>
   );
 };
 
-export default BlogIndex;
+export default HomePage;
 
-export const pageQuery = graphql`
-  query BlogIndex {
-    site {
-      siteMetadata {
-        title
-        siteUrl
-        thumbnail
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          description
-          tags
-        }
-      }
-    }
-  }
-`;
+export const getStaticProps = async () => {
+  await generateRssFeed();
+  const posts = getSortedPosts()
+    .slice(0, 3)
+    .map((post) => ({
+      title: post.title,
+      description: post.description ?? null,
+      date: post.date,
+      url: post.url,
+    }));
+  return { props: { posts } };
+};
