@@ -31,6 +31,7 @@ export const BlogConfig: BlogConfigOptions = {
     category: 'Comments',
     categoryId: 'DIC_kwDOAJMtTs4CVJ9b',
   },
+  googleAnalyticsId: 'G-QM9FDNCL7E',
 };
 export const SEOConfig: NextSeoProps = {
   title: BlogConfig.title,
