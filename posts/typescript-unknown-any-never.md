@@ -69,7 +69,7 @@ user.notifications.latest.messge;
 
 # Never
 
-앞서 말한 `unknown` 타입은 모든 타입을 포함하는 슈퍼셋 타입이라고 설명했습니다. 반대로 `never`는 모든 타입의 하위 타입입니다. 그래서 어떤 다른 값도 `never` 타입에 할당할 수 없습니다.
+앞서 말한 `any` 타입은 모든 타입을 포함하는 슈퍼셋 타입이라고 설명했습니다. 반대로 `never`는 모든 타입의 하위 타입입니다. 그래서 어떤 다른 값도 `never` 타입에 할당할 수 없습니다.
 
 ```typescript
 // never 변수에는 어떤 값도 할당할 수 없습니다.
@@ -87,7 +87,7 @@ const fetchFriendsOfUser = (username: string): never => {
 }
 ```
 
-`never`를 사용하여 특정 타입 값을 할당받지 않도록 하는것도 가능합니다. 예를 들어 아래의 NonString 타입은 어떤 타입이든 될 수 있지만 `string` 타입인 경우는 `never`로 추론하여 `string` 타입의 값이 할당되지 못하도록 할 수 있습니다.
+`never`를 사용하여 특정 타입을 할당받지 않도록 하는것도 가능합니다. 예를 들어 아래의 NonString 타입은 어떤 타입이든 될 수 있지만 `string` 타입인 경우는 `never`로 추론하여 `string` 타입의 값이 할당되지 못하도록 할 수 있습니다.
 ```typescript
 type NonString<T> = T extends string ? never : T;
 ```
