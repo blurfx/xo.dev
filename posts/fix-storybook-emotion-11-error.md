@@ -1,5 +1,6 @@
 ---
 title: Storybook과 Emotion 11 충돌 오류 해결하기
+description: Emotion 11과 Storybook을 사용하면서 발생한 모듈간 충돌을 해결하는 방법에 대해 설명합니다.
 date: "2021-02-10"
 tags: [Front-end, Storybook, Emotion, webpack]
 ---

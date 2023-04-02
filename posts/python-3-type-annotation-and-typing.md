@@ -1,5 +1,6 @@
 ---
 title: Type Annotation, typing, mypy - 더 나은 Python 코드를 위해
+description: Python 3.5에 추가된 typing 모듈과 정적 타입 검사기 mypy를 활용하는 방법에 대해 설명합니다.
 date: "2019-03-17"
 tags: [Python]
 ---

@@ -1,5 +1,6 @@
 ---
 title: 질문에 서투른 사람을 위한 질문하는 방법
+description: 질문을 잘하는 방법에 대한 개인적인 생각을 적어봅니다.
 date: "2020-10-15"
 tags: [Communication]
 ---

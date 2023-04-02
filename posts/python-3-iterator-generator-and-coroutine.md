@@ -1,5 +1,6 @@
 ---
 title: Python 3 Iterator와 Generator 그리고 Coroutine
+description: Python 3에서 Iterator, Generator 그리고 Coroutine에 대해 알아봅니다.
 date: "2019-03-01"
 tags: [Python]
 ---

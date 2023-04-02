@@ -1,5 +1,6 @@
 ---
 title: Docker로 한 서버를 여러 사람이 독립적으로 사용할 수 있는 환경 만들기
+description: Docker로 한 서버를 여러 사람이 독립적으로 사용할 수 있는 환경을 만드는 방법에 대해 설명합니다.
 date: "2020-03-12"
 tags: [Docker, Linux]
 ---

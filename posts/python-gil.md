@@ -1,5 +1,6 @@
 ---
 title: Python의 Global Interpreter Lock(GIL)
+description: Python의 Thread Safety와 Global Interpreter Lock(GIL)에 대해 설명합니다.
 date: "2019-05-31"
 tags: [Python]
 ---

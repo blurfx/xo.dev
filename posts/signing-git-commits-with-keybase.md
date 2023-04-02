@@ -1,5 +1,6 @@
 ---
 title: Keybase로 Git 커밋 서명하기
+description: Keybase를 사용하여 Git 커밋 서명을 하는 방법을 설명합니다.
 date: "2021-03-13"
 tags: [Git]
 ---

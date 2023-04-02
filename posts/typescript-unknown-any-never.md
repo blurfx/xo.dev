@@ -1,5 +1,6 @@
 ---
 title: TypeScript의 unknown, any 그리고 never
+description: TypeScript의 unknown, any 그리고 never에 대해 설명합니다.
 date: "2020-09-19"
 tags: [TypeScript]
 ---

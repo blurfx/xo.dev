@@ -1,5 +1,6 @@
 ---
 title: GitLab Runner에서 Docker in Docker 사용하기
+description: Docker in Docker를 사용하는 방법에 대해 설명합니다.
 date: "2019-03-27"
 tags: [Linux]
 ---

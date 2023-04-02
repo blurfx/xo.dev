@@ -1,5 +1,6 @@
 ---
 title: 애플 실리콘(M1) 터미널 환경 설정하기
+description: M1 ARM 환경에서 터미널 환경을 설정하는 방법을 알아봅니다.
 date: "2021-12-12"
 tags: [Shell]
 ---

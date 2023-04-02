@@ -2,7 +2,7 @@
 title: HTML이 당신의 생각보다 더 중요한 이유
 date: "2022-01-18"
 tags: [HTML]
-description: 프론트엔드 개발자라면 HTML도 잘 알아야 합니다.
+description: HTML을 어떻게 올바르게 작성하고 그것이 중요한 이유에 대해 설명합니다. 
 ---
 
 ## 개요
