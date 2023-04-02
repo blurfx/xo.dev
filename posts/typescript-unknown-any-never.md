@@ -6,7 +6,7 @@ tags: [TypeScript]
 
 TypeScript는 JavaScript에 없는 새로운 타입들이 있는데 최근에 TypeScript로 개발을 하며 `unknown`, `any` 그리고 `never` 세 가지 타입의 차이점을 제대로 이해하지 않고 있다는 생각이 들어 따로 정리해보았습니다.
 
-# Unknown
+## Unknown
 
 `unknown`은 TypeScript의 탑 타입(Top Type)입니다. TypeScript에 존재하고, 존재 할 수 있는 모든 타입들을 포함하여 어떤 값이든 가질 수 있지만, 그로 인해 모든 타입이 공통적으로 할 수 있는 연산 외에는 할 수 있는 것이 아무것도 없습니다. 그래서 이름 그대로 값이 어떤 타입인지 알 수 없는(unknown) 타입이기 때문에 `unknown` 타입 변수는 사용할 때 어떤 타입인지 다시 한번 명시를 해주어야 합니다.
 
@@ -41,7 +41,7 @@ if (typeof maybe === 'string') {
 }
 ```
 
-# Any
+## Any
 
 타입 검사를 *항상* 만족하여 어떤 값이든 바로 대입하고 사용할 수 있는, TypeScript에서 가장 유용하지만 가장 주의해서 사용해야 하는 마법과 같은 타입입니다. JavaScript로 작성된 모듈을 최소한의 수정으로 사용하거나, 혹은 기존의 JavaScript 코드를 TypeScript로 재작성하는 작업을 할 때 이 `any`라는 마법 같은 타입을 사용하면 별다른 작업 없이 코드가 동작하지만, 반대로 타입 검사를 항상 만족하므로 의도치 않은 형 변환이나 전혀 예상하지 못한 의도되지 않은 타입의 값이 대입되는 등 여러 사이드 이펙트를 일으켜 안전성이 낮아지기 때문에 조심해야 합니다.
 
@@ -67,7 +67,7 @@ const user: any = {};
 user.notifications.latest.messge;
 ```
 
-# Never
+## Never
 
 앞서 말한 `any` 타입은 모든 타입을 포함하는 슈퍼셋 타입이라고 설명했습니다. 반대로 `never`는 모든 타입의 하위 타입입니다. 그래서 어떤 다른 값도 `never` 타입에 할당할 수 없습니다.
 

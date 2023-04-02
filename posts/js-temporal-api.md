@@ -5,7 +5,7 @@ tags: [JavaScript]
 description: JavaScript의 Date API를 대체할 Temporal API에 대해 알아봅니다.
 ---
 
-# JavaScript와 시간, 날짜 그리고 `Date`
+## JavaScript와 시간, 날짜 그리고 `Date`
 
 JavaScript에서 시간과 날짜에 대한 정보를 다룰 때 기본적으로 `Date` 객체를 사용합니다. 하지만 `Date` 객체를 쓰고 싶어 하는 사람은 별로 없습니다. 왜냐하면, 뭔가 이상하고 사용하기 어렵거든요.
 
@@ -40,7 +40,7 @@ JavaScript는 Date API를 왜 이렇게 불편하게 설계했을까요? 그 원
 
 시간이 흐르고 Java는 Java 8을 기점으로 현대적인 시간/날짜 관리 패키지인 `java.time`을 추가하면서 `java.util.Date`와 멀어졌지만 JavaScript는 아직까지 `Date`를 사용하고 있습니다. 저희는 언제까지 불편하고 오래된 API를 가진 `Date`를 써야 하는 것일까요?
 
-# Temporal API
+## Temporal API
 
 사실 JavaScript도 현대적인 시간/날짜 API를 준비하고 있습니다. 바로 [Temporal API](https://tc39.es/proposal-temporal/)입니다. 앞에서 `Date` API가 Java에서 많은 영향을 받았다고 했듯이 이 `Temporal` API 역시 Java의 `java.time.temporal` 인터페이스에서 많은 영향을 받았습니다.
 
@@ -195,7 +195,7 @@ t.add({ months: 3, hours: 5 });
 ```
 
 
-# 마치며
+## 마치며
 
 글을 작성하며 잠깐 사용해 본 느낌으로는 `Date`에서 불편했던 거의 모든 부분이 개선되어서 `date-fns`나 `Day.js` 같은 외부 라이브러리를 사용할 필요를 못 느낄 만큼 좋았습니다.
 

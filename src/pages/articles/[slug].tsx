@@ -32,7 +32,7 @@ const ArticlePage = ({
     <div>
       <NextSeo
         title={post.title}
-        description={post.description}
+        description={post.description ?? post.title}
         canonical={`${SEOConfig.canonical}${post.url}`}
         openGraph={{
           title: post.title,

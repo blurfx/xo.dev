@@ -8,7 +8,7 @@ tags: [Shell]
 
 > macOS 기준으로 작성했으며 Ubuntu 20.04에서도 아래의 과정을 통해 터미널 설정을 해보았습니다.
 
-# Homebrew
+## Homebrew
 
 `Homebrew`는 맥과 리눅스에서 동작하는 패키지 매니저다. 보통 리눅스에서는 `apt`, `snap`, `yum` 같이 리눅스 배포판 개발자가 만들어놓은 패키지 매니저들이 따로 있지만 맥은 공식 패키지 매니저가 따로 없기 떄문에 Homebrew를 사용한다.
 
@@ -27,7 +27,7 @@ brew install gcc
 ```
 
 
-# Zsh
+## Zsh
 
 macOS 10.15 Catalina부터는 기본적으로 zsh가 설치되어 있지만, 다른 리눅스 배포판의 경우 대부분의 `bash`를 기본으로 사용할 것이다.
 
@@ -124,14 +124,14 @@ if ! zplug check --verbose; then
     
     ![Powerlevel10k](/images/my-terminal-configuration/zsh-syntax-2.png)
 
-# fzf
+## fzf
 
 증분 검색으로 터미널에서 명령어 히스토리나 파일, 폴더 등을 빠르게 검색할 수 있게 해주는 툴이다. 예전에는 [percol](https://github.com/mooz/percol)을 사용했었는데 계속 사용하다 보니 fzf가 훨씬 빠르고 사용하기 쉽다는 느낌을 많이 받았다.
 
 [레포지터리](https://github.com/junegunn/fzf)에 적혀있는 설치 가이드를 따라 하면 되는데 여기서 추가로 Key binding은 꼭 설치하는 것이 좋다. 명령어 히스토리나 파일, 폴더 검색을 `Ctrl + R`과 `Ctrl + T`로 검색할 수 있게 해주는데 이게 정말 편하다.
 
 
-# Vim
+## Vim
 
 나는 터미널 텍스트 에디터인 Vim을 자주 사용하는데, Vim에서 사용하는 플러그인들을 소개한다.
 
@@ -158,7 +158,7 @@ call plug#end()
 - [NERDTree](https://github.com/preservim/nerdtree) — 파일 탐색기
 - [Papercolor-theme](https://github.com/NLKNguyen/papercolor-theme) — Vim 테마. 깔끔해서 이걸 사용한다.
 
-# tmux
+## tmux
 
 tmux는 Terminal Multiplexer 중 하나이다. Terminal Multiplexer란 하나의 창에서 여러 개의 터미널을 동시에 사용할 수 있게 해주는 것을 말하는데, tmux도 그중 하나다.
 
@@ -168,7 +168,7 @@ tmux는 Terminal Multiplexer 중 하나이다. Terminal Multiplexer란 하나의
 
 tmux는 기본적으로 마우스를 사용하는 설정이 꺼져있는데 `.tmux.conf`에 `set -g mouse on`를 추가해주면 마우스를 사용할 수 있다.
 
-# 마무리
+## 마무리
 
 내가 사용하는 모든 설정파일은 [dotfiles](https://github.com/blurfx/dotfiles)에 있다.
 

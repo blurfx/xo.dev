@@ -4,7 +4,7 @@ date: "2021-03-13"
 tags: [Git]
 ---
 
-# GPG에 PGP 공개키-개인키 키페어 등록하기
+## GPG에 PGP 공개키-개인키 키페어 등록하기
 
 먼저 Keybase CLI를 설치한다.
 
@@ -38,7 +38,7 @@ keybase pgp export | gpg --import
 keybase pgp export -s | gpg --allow-secret-key-import --import --batch
 ```
 
-# `.gitconfig` 수정하기
+## `.gitconfig` 수정하기
 
 먼저 아래 명령어로 자신의 PGP 키 ID를 가져온다.
 ```sh
@@ -68,7 +68,7 @@ B. `.gitconfig` 파일을 직접 열고 아래 내용 추가하기 (보통 `~/.g
 
 이제 커밋을 할때마다 PGP키로 서명하는 프롬프트가 나오게된다.
 
-# GitHub에 공개키 추가하기
+## GitHub에 공개키 추가하기
 
 먼저 Keybase에서 공개키를 추출하여 복사한다.
 ```sh

@@ -20,11 +20,11 @@ Did you mean this?
     help
 ```
 
-# 문제 정의하기
+## 문제 정의하기
 
 비슷한 명령어를 찾는다는 문제는 두 문자열의 유사도를 검사하는 문제로 치환할 수 있다. 예를 들어 사용자가 `comma`라는 문자열을 `commit`, `fetch`라는 두 문자열에 대해 유사도 검사를 한다면 `commit`이 더 `comma`와 유사하다고 판별될 것이다. 이런 식으로 사용자가 입력한 명령어를 프로그램에서 사용 가능한 명령어와 유사도 검사를 진행하고 최대한 비슷한 것들을 추려내 사용자에게 추천하면 기본적인 비슷한 명령어 추천 기능이 완성될 것이다. 
 
-# 편집 거리 (Edit distance)
+### 편집 거리 (Edit distance)
 
 문자열 유사도를 계산에는 보통 편집 거리 알고리즘을 사용한다. 편집 거리는 두 문자열이 있을 때 몇 번의 수정을 거쳐야 같은 문자열이 되는지 나타내는데 편집 거리가 짧을수록 최소한이 수정이 필요하므로 짧은 편집 거리를 가질수록 두 문자열이 유사하다는 것을 판별할 수 있다.
 
@@ -35,7 +35,7 @@ Did you mean this?
 
 이러한 편집 거리를 계산하는 알고리즘 중 비교적 널리 알려진 것이 [해밍 거리](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)와 [최장 공통부분 수열(Longest Common Subsequence)](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)이지만 두 알고리즘은 앞에서 정의한 문제를 해결하기에는 좋지 않다. 해밍 거리는 두 문자열의 길이가 같아야 사용할 수 있어 다양한 길이를 가진 문자열들을 비교하기에 부적합하며, 최장 공통부분 수열은 문자에 대한 삽입, 삭제 연산만 허용하기 때문이다. 그래서 이런 문제를 해결하는데 보통 [레벤슈타인 거리(Levenshtein distance)](https://en.wikipedia.org/wiki/Levenshtein_distance)를 사용한다.
 
-## 레벤슈타인 거리 (Levenshtein distance)
+### 레벤슈타인 거리 (Levenshtein distance)
 
 레벤슈타인 거리는 한 문자열을 다른 문자열과 똑같이 만드는데 최소로 필요한 문자 삽입, 삭제, 변경 횟수를 나타낸다.
 
@@ -93,7 +93,7 @@ function levenshtein(source: string, target: string): number {
 }
 ```
 
-# 문제 해결하기
+## 문제 해결하기
 
 위 코드를 기반으로 명령어 추천 기능을 만들어보자.
 
