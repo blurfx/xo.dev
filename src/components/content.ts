@@ -12,6 +12,7 @@ const Content = styled('div', {
   blockquote: {
     borderLeft: '2px solid $blockquoteBorder',
     paddingLeft: '1rem',
+    color: '$textSecondary',
   },
   h1: {
     marginBottom: '0.75rem',
