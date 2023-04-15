@@ -103,6 +103,9 @@ const Content = styled('div', {
     borderRadius: '$xs',
     backgroundColor: '$inlineCodeBg',
   },
+  '.katex-display': {
+    overflowX: 'auto',
+  },
 });
 
 export default Content;
