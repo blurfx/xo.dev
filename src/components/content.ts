@@ -69,6 +69,8 @@ const Content = styled('div', {
   },
   th: {
     py: '0.75rem',
+
+    textAlign: 'justify',
   },
   td: {
     py: '0.75rem',

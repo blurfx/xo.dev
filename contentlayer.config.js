@@ -1,6 +1,8 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 
 const postFields = {
   fields: {
@@ -60,11 +62,11 @@ export default makeSource({
   contentDirPath: 'posts',
   documentTypes: [MDXPost, Post],
   markdown: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
+    remarkPlugins: [remarkGfm, remarkMath],
+    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions], rehypeKatex],
   },
   mdx: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
+    remarkPlugins: [remarkGfm, remarkMath],
+    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions], rehypeKatex],
   },
 });
