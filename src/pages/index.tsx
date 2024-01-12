@@ -1,5 +1,4 @@
 import { InferGetStaticPropsType } from 'next';
-import Link from 'next/link';
 
 import Card from '~/components/card';
 import CardContainer from '~/components/card-container';
