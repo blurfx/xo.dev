@@ -17,7 +17,7 @@ const HomePage = ({
       <Section title={'Changhui Lee'}>
         <Content>
           <p>분야에 상관없이 소프트웨어를 개발하는 일을 사랑하며, 일을 제대로 잘하는 것에 관심이 많습니다.</p>
-          <p>종종 <Link href={'https://unsplash.com/@changhui'}>사진</Link>을 찍고 글을 씁니다. 다양한 기술에 관심이 많으며 특히 Go를 좋아합니다.</p>
+          <p>다양한 기술에 관심이 많으며 특히 Go를 좋아합니다.</p>
         </Content>
       </Section>
       <Section title={'Articles'}>
