@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://ambienxo.vercel.app',
+  siteUrl: 'https://xo.dev',
   generateRobotsTxt: true,
 };
